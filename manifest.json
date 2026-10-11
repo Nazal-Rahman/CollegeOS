@@ -1,0 +1,62 @@
+{
+  "name": "College OS - Academic Operating System",
+  "short_name": "College OS",
+  "description": "Unified student OS with timetable, attendance tracker, tasks, deep work timer, and Cloudinary vault.",
+  "start_url": "/home",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": [
+    "window-controls-overlay",
+    "standalone",
+    "fullscreen"
+  ],
+  "orientation": "portrait-primary",
+  "background_color": "#f9f9ff",
+  "theme_color": "#1451d1",
+  "categories": [
+    "education",
+    "productivity"
+  ],
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Timetable",
+      "url": "/timetable",
+      "description": "View class schedule"
+    },
+    {
+      "name": "Tasks",
+      "url": "/tasks",
+      "description": "Manage assignments and labs"
+    },
+    {
+      "name": "Attendance",
+      "url": "/attendance",
+      "description": "Mark daily attendance"
+    },
+    {
+      "name": "Cloud Vault",
+      "url": "/vault",
+      "description": "Access Cloudinary student files"
+    }
+  ]
+}

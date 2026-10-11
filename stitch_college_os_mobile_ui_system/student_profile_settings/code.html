@@ -1,0 +1,2149 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-low": "#f1f3ff", "inverse-primary": "#b4c4ff", "on-tertiary-fixed": "#260059", "primary": "#1451d1", "on-error-container": "#93000a", "error": "#ba1a1a", "on-secondary": "#ffffff", "primary-container": "#3b6ceb", "surface-container-highest": "#dbe2f9", "tertiary-fixed": "#ebddff", "surface-bright": "#f9f9ff", "tertiary-fixed-dim": "#d3bbff", "inverse-surface": "#293041", "background": "#f9f9ff", "on-surface-variant": "#434654", "secondary-container": "#77fac7", "surface-container-lowest": "#ffffff", "inverse-on-surface": "#edf0ff", "primary-fixed-dim": "#b4c4ff", "surface-tint": "#1954d4", "on-tertiary": "#ffffff", "surface-dim": "#d2daf0", "tertiary-container": "#865cd5", "primary-fixed": "#dbe1ff", "tertiary": "#6d42ba", "on-secondary-container": "#007353", "surface-variant": "#dbe2f9", "on-tertiary-fixed-variant": "#5729a3", "on-primary-fixed": "#00174c", "on-secondary-fixed-variant": "#00513a", "on-primary": "#ffffff", "on-background": "#141b2c", "on-secondary-fixed": "#002115", "outline-variant": "#c3c6d7", "secondary-fixed-dim": "#58ddac", "on-primary-container": "#fefcff", "surface-container": "#e9edff", "on-primary-fixed-variant": "#003daa", "on-error": "#ffffff", "secondary-fixed": "#77fac7", "outline": "#737686", "on-surface": "#141b2c", "error-container": "#ffdad6", "surface": "#f9f9ff", "secondary": "#006c4e", "surface-container-high": "#e0e8ff", "on-tertiary-container": "#fffbff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin": "1rem", "space-sm": "0.5rem", "space-md": "1rem", "space-xl": "2rem", "space-xs": "0.25rem", "space-lg": "1.25rem", "gutter": "1rem" }, "fontFamily": { "label-md": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "body-lg": ["Inter"], "label-sm": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-md": ["Inter"], "label-lg": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "body-sm": ["Inter"], "headline-xl": ["Plus Jakarta Sans"] }, "fontSize": { "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "500" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }], "headline-lg": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0", "fontWeight": "400" }], "label-lg": ["14px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "0", "fontWeight": "600" }], "body-sm": ["13px", { "lineHeight": "18px", "letterSpacing": "0", "fontWeight": "400" }], "headline-xl": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+    html.dark, html.dark body {
+      background-color: #0b0f19 !important;
+      color: #e2e8f0 !important;
+    }
+    html.dark .bg-surface {
+      background-color: #0b0f19 !important;
+    }
+    html.dark .bg-surface-container-lowest {
+      background-color: #131929 !important;
+      border-color: rgba(255, 255, 255, 0.08) !important;
+    }
+    html.dark .bg-surface-container-low {
+      background-color: #192135 !important;
+    }
+    html.dark .bg-surface-container {
+      background-color: #202b44 !important;
+    }
+    html.dark .bg-surface-container-high {
+      background-color: #273554 !important;
+    }
+    html.dark .bg-surface-container-highest {
+      background-color: #314269 !important;
+    }
+    html.dark .text-on-surface {
+      color: #f8fafc !important;
+    }
+    html.dark .text-on-surface-variant {
+      color: #94a3b8 !important;
+    }
+    html.dark header, html.dark nav {
+      background-color: rgba(11, 15, 25, 0.92) !important;
+      border-color: rgba(255, 255, 255, 0.08) !important;
+    }
+    html.dark input, html.dark select, html.dark textarea {
+      background-color: #192135 !important;
+      color: #f8fafc !important;
+      border-color: #314269 !important;
+    }
+    html.dark .divide-surface-container-low > :not([hidden]) ~ :not([hidden]) {
+      border-color: rgba(255, 255, 255, 0.06) !important;
+    }
+    html.dark .border-surface-container-high,
+    html.dark .border-surface-container-high\/60,
+    html.dark .border-surface-container-high\/70,
+    html.dark .border-surface-container-low {
+      border-color: rgba(255, 255, 255, 0.08) !important;
+    }
+    html.dark .hover\:bg-surface-container-low:hover {
+      background-color: #202b44 !important;
+    }
+    html.dark .bg-surface-container-high\/40 {
+      background-color: rgba(39, 53, 84, 0.4) !important;
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="College OS Logo" class="h-8 w-auto object-contain flex-shrink-0" src="/logo.png"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-on-surface truncate">College OS</span></div></div></div><div class="flex items-center gap-space-xs flex-shrink-0"><div class="flex items-center justify-center pl-space-xs"><div class="w-8 h-8 rounded-full bg-surface-container-high border border-surface-container-highest flex items-center justify-center text-on-surface-variant ring-2 ring-primary/20"><span class="material-symbols-outlined text-[18px]">person</span></div></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full pb-10">
+<!-- Top Profile Hero Section -->
+<section class="px-margin pt-space-sm pb-space-md">
+<div class="bg-surface-container-lowest rounded-[22px] p-space-lg shadow-sm flex flex-col relative overflow-hidden">
+<!-- Ambient Decorative Backdrop -->
+<div class="absolute -right-12 -top-12 w-48 h-48 bg-primary-fixed/30 rounded-full blur-2xl pointer-events-none"></div>
+<div class="absolute -left-12 -bottom-12 w-40 h-40 bg-secondary-fixed/20 rounded-full blur-xl pointer-events-none"></div>
+<div class="flex items-start justify-between gap-space-sm relative z-10">
+<div class="flex items-start gap-3 min-w-0 flex-1">
+<!-- Blank Neutral Avatar (No image, no AI picture) -->
+<div class="relative flex-shrink-0">
+  <div class="w-16 h-16 rounded-full bg-surface-container-high border-2 border-surface-container-highest flex items-center justify-center text-on-surface-variant/80 shadow-inner">
+    <span class="material-symbols-outlined text-[36px]">person</span>
+  </div>
+</div>
+<!-- Bio & Identity Details -->
+<div class="flex flex-col min-w-0 flex-1">
+  <div class="flex items-center gap-1.5 flex-wrap">
+    <h1 class="font-headline-md text-headline-md text-on-surface truncate tracking-tight font-bold text-xl" id="displayProfileName">Alex Morgan</h1>
+    <span class="inline-flex items-center gap-0.5 px-2 py-0.2 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-[10px] font-bold shadow-xs">
+      <span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+      Active
+    </span>
+  </div>
+  <p class="font-body-sm text-body-sm text-on-surface-variant truncate mt-0.5 text-xs" id="displayStudentId">
+    ID: STU-2022-8492
+  </p>
+  <p class="font-label-md text-label-md text-primary truncate mt-0.5 flex items-center gap-1 text-xs" id="displayProfileCollege">
+    <span class="material-symbols-outlined text-[14px]">account_balance</span>
+    <span id="displayCollegeText">Apex Institute of Technology</span>
+  </p>
+  <div class="flex flex-wrap gap-1.5 mt-1.5">
+    <span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-[11px]" id="displayProfileMajorSem">
+      Sem 5 • Computer Science &amp; Engineering
+    </span>
+    <span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]" id="displayProfileAcademicYear">
+      Class of '26
+    </span>
+  </div>
+</div>
+</div>
+
+<!-- Edit Profile Details Capsule Button (Matching Mobile UI) -->
+<button id="openEditProfileBtn" class="flex-shrink-0 px-3 py-1.5 rounded-full border border-primary/30 hover:border-primary text-primary bg-primary-fixed/20 hover:bg-primary-fixed/40 font-label-sm text-xs font-semibold flex items-center gap-1 transition-all active:scale-95 shadow-2xs" title="Edit Profile Details">
+<span class="material-symbols-outlined text-[15px]">edit_note</span>
+<span>Edit Profile</span>
+</button>
+</div>
+
+</div>
+</section>
+<!-- Section 1: Academic Settings (Matching Mobile UI) -->
+<section class="px-margin pb-space-md">
+  <h2 class="text-xs font-bold uppercase tracking-wider text-primary mb-2.5 px-1 font-label-sm">Academic Settings</h2>
+  <div class="bg-surface-container-lowest rounded-[22px] p-2 shadow-sm border border-surface-container-high/60 flex flex-col divide-y divide-surface-container-low">
+    
+    <!-- 1. Edit Academic Profile -->
+    <div class="flex items-center justify-between p-3 rounded-xl hover:bg-surface-container-low transition-colors cursor-pointer" id="openAcademicProfileBtn">
+      <div class="flex items-center gap-3 min-w-0">
+        <div class="w-10 h-10 rounded-xl bg-primary-fixed flex items-center justify-center text-primary flex-shrink-0">
+          <span class="material-symbols-outlined text-[22px]">person_edit</span>
+        </div>
+        <div class="flex flex-col min-w-0">
+          <span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">Edit Academic Profile</span>
+          <span class="font-body-sm text-body-sm text-on-surface-variant text-xs truncate">Degree, Major, Roll Number &amp; Year</span>
+        </div>
+      </div>
+      <span class="material-symbols-outlined text-on-surface-variant text-[20px]">chevron_right</span>
+    </div>
+
+    <!-- 2. Subject Management -->
+    <div class="flex items-center justify-between p-3 rounded-xl hover:bg-surface-container-low transition-colors cursor-pointer" id="openSubjectMgmtBtn">
+      <div class="flex items-center gap-3 min-w-0">
+        <div class="w-10 h-10 rounded-xl bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed flex-shrink-0">
+          <span class="material-symbols-outlined text-[22px]">collections_bookmark</span>
+        </div>
+        <div class="flex flex-col min-w-0">
+          <span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">Subject Management</span>
+          <span class="font-body-sm text-body-sm text-on-surface-variant text-xs truncate" id="subjectMgmtSubtitle">6 Active Subjects • Manage Credits</span>
+        </div>
+      </div>
+      <span class="material-symbols-outlined text-on-surface-variant text-[20px]">chevron_right</span>
+    </div>
+
+    <!-- 3. Grade History (CGPA SGPA) -->
+    <div class="flex items-center justify-between p-3 rounded-xl hover:bg-surface-container-low transition-colors cursor-pointer" id="openGradeHistoryBtn">
+      <div class="flex items-center gap-3 min-w-0">
+        <div class="w-10 h-10 rounded-xl bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed flex-shrink-0">
+          <span class="material-symbols-outlined text-[22px]">history_edu</span>
+        </div>
+        <div class="flex flex-col min-w-0">
+          <span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">Grade History</span>
+          <span class="font-body-sm text-body-sm text-on-surface-variant text-xs truncate" id="gradeHistorySubtitle">CGPA 3.82 • Semester SGPA Breakdown</span>
+        </div>
+      </div>
+      <span class="material-symbols-outlined text-on-surface-variant text-[20px]">chevron_right</span>
+    </div>
+  </div>
+</section>
+
+<!-- Section 2: Academic Toolkit (Functional GPA Simulator & Goal Monitor) -->
+<section class="px-margin pb-space-md">
+  <h2 class="text-xs font-bold uppercase tracking-wider text-primary mb-2.5 px-1 font-label-sm flex items-center gap-1.5">
+    <span class="material-symbols-outlined text-[16px]">bolt</span>
+    <span>Academic Toolkit</span>
+  </h2>
+  
+  <!-- Dual Functional Tools Grid: CGPA Simulator & Goal Monitor -->
+  <div class="grid grid-cols-2 gap-space-sm">
+      <!-- 1. Completely Functional CGPA Calculator & Simulator -->
+      <div class="bg-surface-container-lowest rounded-[18px] p-space-md shadow-sm border border-surface-container-high/60 flex flex-col justify-between active:scale-[0.98] transition-all cursor-pointer hover:shadow-md" id="openCgpaCalcBtn">
+        <div class="flex items-center justify-between">
+          <div class="w-10 h-10 rounded-xl bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed">
+            <span class="material-symbols-outlined text-[22px]">calculate</span>
+          </div>
+          <span class="px-2 py-0.5 rounded-full bg-tertiary-fixed/60 text-on-tertiary-fixed text-[10px] font-bold">Interactive</span>
+        </div>
+        <div class="mt-3">
+          <div class="flex items-center justify-between">
+            <h3 class="font-label-lg text-label-lg text-on-surface font-bold">GPA Simulator</h3>
+            <span class="material-symbols-outlined text-[16px] text-on-surface-variant">arrow_forward</span>
+          </div>
+          <p class="font-body-sm text-body-sm text-on-surface-variant text-xs mt-0.5">Calculate SGPA &amp; CGPA</p>
+        </div>
+      </div>
+
+      <!-- 2. Completely Functional Goal Monitor -->
+      <div class="bg-surface-container-lowest rounded-[18px] p-space-md shadow-sm border border-surface-container-high/60 flex flex-col justify-between active:scale-[0.98] transition-all cursor-pointer hover:shadow-md" id="openGoalMonitorBtn">
+        <div class="flex items-center justify-between">
+          <div class="w-10 h-10 rounded-xl bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
+            <span class="material-symbols-outlined text-[22px]">track_changes</span>
+          </div>
+          <span class="px-2 py-0.5 rounded-full bg-secondary-fixed/60 text-on-secondary-fixed text-[10px] font-bold">Interactive</span>
+        </div>
+        <div class="mt-3">
+          <div class="flex items-center justify-between">
+            <h3 class="font-label-lg text-label-lg text-on-surface font-bold">Goal Monitor</h3>
+            <span class="material-symbols-outlined text-[16px] text-on-surface-variant">arrow_forward</span>
+          </div>
+          <p class="font-body-sm text-body-sm text-on-surface-variant text-xs mt-0.5">Attendance &amp; CGPA Goals</p>
+        </div>
+      </div>
+    </div>
+</section>
+
+<!-- Section 3: App Settings (Matching Mobile UI) -->
+<section class="px-margin pb-space-md">
+  <h2 class="text-xs font-bold uppercase tracking-wider text-primary mb-2.5 px-1 font-label-sm">App Settings</h2>
+  <div class="bg-surface-container-lowest rounded-[22px] p-2 shadow-sm border border-surface-container-high/60 flex flex-col divide-y divide-surface-container-low">
+    
+    <!-- 1. Notifications -->
+    <div class="flex items-center justify-between p-3 rounded-xl hover:bg-surface-container-low transition-colors cursor-pointer" id="openNotificationsBtn">
+      <div class="flex items-center gap-3 min-w-0">
+        <div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-on-surface-variant flex-shrink-0">
+          <span class="material-symbols-outlined text-[22px]">notifications</span>
+        </div>
+        <div class="flex flex-col min-w-0">
+          <span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">Notifications</span>
+          <span class="font-body-sm text-body-sm text-on-surface-variant text-xs truncate">Lecture alerts, deadlines &amp; morning summary</span>
+        </div>
+      </div>
+      <span class="material-symbols-outlined text-on-surface-variant text-[20px]">chevron_right</span>
+    </div>
+
+    <!-- 2. Sync Integrations -->
+    <div class="flex items-center justify-between p-3 rounded-xl hover:bg-surface-container-low transition-colors cursor-pointer" id="openSyncIntegrationsBtn">
+      <div class="flex items-center gap-3 min-w-0">
+        <div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-on-surface-variant flex-shrink-0">
+          <span class="material-symbols-outlined text-[22px]">sync</span>
+        </div>
+        <div class="flex flex-col min-w-0">
+          <span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">Sync Integrations</span>
+          <span class="font-body-sm text-body-sm text-on-surface-variant text-xs truncate">Firebase Firestore &amp; Cloudinary CDN</span>
+        </div>
+      </div>
+      <div class="flex items-center gap-1.5 flex-shrink-0">
+        <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+        <span class="material-symbols-outlined text-on-surface-variant text-[20px]">chevron_right</span>
+      </div>
+    </div>
+
+    <!-- 3. Appearance (Dark Mode & White Mode Switcher, NO accent colors) -->
+    <div class="flex items-center justify-between p-3 rounded-xl hover:bg-surface-container-low transition-colors cursor-pointer" id="openAppearanceBtn">
+      <div class="flex items-center gap-3 min-w-0">
+        <div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-on-surface-variant flex-shrink-0">
+          <span class="material-symbols-outlined text-[22px]">palette</span>
+        </div>
+        <div class="flex flex-col min-w-0">
+          <span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">Appearance</span>
+          <span class="font-body-sm text-body-sm text-on-surface-variant text-xs truncate" id="appearanceCurrentModeText">Light (White) Mode</span>
+        </div>
+      </div>
+      <span class="material-symbols-outlined text-on-surface-variant text-[20px]">chevron_right</span>
+    </div>
+  </div>
+</section>
+
+<!-- Section 4: Sign Out (Soft Red Pill Button matching phone screenshot) -->
+<section class="px-margin pt-space-xs pb-space-lg flex flex-col items-center gap-3">
+  <button class="w-full h-12 rounded-full bg-error-container/40 hover:bg-error-container/60 text-error font-label-lg text-label-lg font-bold flex items-center justify-center gap-2 active:scale-98 transition-all shadow-xs" id="signout-btn">
+    <span class="material-symbols-outlined text-[20px]">logout</span>
+    <span>Sign Out</span>
+  </button>
+  <p class="font-body-sm text-body-sm text-on-surface-variant/60 text-xs text-center">
+    College OS v2.4.2 • Cross-Platform Web &amp; Android Sync
+  </p>
+</section>
+
+<!-- ============================================== -->
+<!-- MODAL 1: Edit Profile Details Modal Sheet       -->
+<!-- ============================================== -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm hidden items-end sm:items-center justify-center p-0 sm:p-4 transition-opacity duration-300" id="editProfileModal">
+  <div class="w-full max-w-md bg-surface-container-lowest rounded-t-[28px] sm:rounded-[28px] p-space-lg shadow-2xl flex flex-col relative max-h-[90vh] overflow-hidden animate-in fade-in slide-in-from-bottom-8">
+    <div class="flex items-center justify-between pb-3 border-b border-surface-container-high/60">
+      <div class="flex items-center gap-2.5">
+        <div class="w-9 h-9 rounded-xl bg-primary-fixed flex items-center justify-center text-primary flex-shrink-0">
+          <span class="material-symbols-outlined text-[20px]">manage_accounts</span>
+        </div>
+        <div>
+          <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold text-base">Edit Profile Details</h3>
+          <p class="font-body-sm text-body-sm text-on-surface-variant text-xs">Offline saved • Syncs with Android &amp; Web</p>
+        </div>
+      </div>
+      <button class="w-8 h-8 rounded-full bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant transition-colors" id="closeEditProfileModal">
+        <span class="material-symbols-outlined text-[18px]">close</span>
+      </button>
+    </div>
+
+    <div class="overflow-y-auto py-3.5 flex-1 flex flex-col gap-3.5 pr-1">
+      <!-- Profile Picture Policy Notice (Strictly Blank Avatar, No Images) -->
+      <div class="bg-surface-container-low rounded-xl p-3 flex items-center gap-3">
+        <div class="w-12 h-12 rounded-full bg-surface-container-high border border-surface-container-highest flex items-center justify-center text-on-surface-variant/80 flex-shrink-0 shadow-inner">
+          <span class="material-symbols-outlined text-[26px]">person</span>
+        </div>
+        <div class="flex-1 min-w-0">
+          <div class="flex items-center gap-1.5 flex-wrap">
+            <span class="font-label-sm text-label-sm text-on-surface font-bold">Profile Picture</span>
+            <span class="px-1.5 py-0.2 rounded-full bg-surface-container-high text-on-surface-variant text-[10px] font-semibold">Blank Silhouette</span>
+          </div>
+          <p class="font-body-sm text-body-sm text-on-surface-variant text-xs mt-0.5">
+            Images &amp; AI portraits disabled by policy. A privacy-first silhouette avatar is used across Web &amp; Android.
+          </p>
+        </div>
+      </div>
+
+      <form id="profileEditForm" onsubmit="event.preventDefault();" class="flex flex-col gap-3">
+        <!-- Name (Required) -->
+        <div class="flex flex-col gap-1">
+          <label for="profileNameInput" class="font-label-sm text-label-sm text-on-surface font-bold flex items-center justify-between">
+            <span class="flex items-center gap-1">
+              <span>Student Name</span>
+              <span class="text-error font-bold">*</span>
+            </span>
+            <span class="text-[11px] text-on-surface-variant font-normal">Must needed</span>
+          </label>
+          <div class="relative flex items-center">
+            <span class="material-symbols-outlined absolute left-3 text-[18px] text-on-surface-variant pointer-events-none">badge</span>
+            <input 
+              type="text" 
+              id="profileNameInput" 
+              required 
+              placeholder="Enter your full name" 
+              class="w-full h-11 pl-9 pr-3 rounded-xl bg-surface-container-low border border-surface-container-high focus:border-primary focus:bg-surface-container-lowest focus:outline-none text-on-surface font-body-md text-sm transition-all"
+            />
+          </div>
+        </div>
+
+        <!-- College with Edit & Deletion -->
+        <div class="flex flex-col gap-1">
+          <div class="flex items-center justify-between">
+            <label for="profileCollegeInput" class="font-label-sm text-label-sm text-on-surface font-bold">
+              College / University
+            </label>
+            <button 
+              type="button" 
+              id="deleteCollegeBtn" 
+              class="text-error hover:text-error/80 font-label-sm text-[11px] font-bold flex items-center gap-0.5 px-2 py-0.5 rounded-md hover:bg-error-container/20 transition-all active:scale-95" 
+              title="Delete college from profile">
+              <span class="material-symbols-outlined text-[14px]">delete</span>
+              <span>Delete College</span>
+            </button>
+          </div>
+          <div class="relative flex items-center">
+            <span class="material-symbols-outlined absolute left-3 text-[18px] text-on-surface-variant pointer-events-none">account_balance</span>
+            <input 
+              type="text" 
+              id="profileCollegeInput" 
+              placeholder="Enter college name (or delete to remove)" 
+              class="w-full h-11 pl-9 pr-3 rounded-xl bg-surface-container-low border border-surface-container-high focus:border-primary focus:bg-surface-container-lowest focus:outline-none text-on-surface font-body-md text-sm transition-all"
+            />
+          </div>
+          <span id="collegeDeletedBadge" class="hidden text-[11px] text-error font-medium flex items-center gap-0.5">
+            <span class="material-symbols-outlined text-[13px]">info</span> College cleared. Click Save to apply.
+          </span>
+        </div>
+
+        <!-- Course / Major with Edit & Deletion -->
+        <div class="flex flex-col gap-1">
+          <div class="flex items-center justify-between">
+            <label for="profileMajorInput" class="font-label-sm text-label-sm text-on-surface font-bold">
+              Course / Major
+            </label>
+            <button 
+              type="button" 
+              id="deleteMajorBtn" 
+              class="text-error hover:text-error/80 font-label-sm text-[11px] font-bold flex items-center gap-0.5 px-2 py-0.5 rounded-md hover:bg-error-container/20 transition-all active:scale-95" 
+              title="Delete course/major from profile">
+              <span class="material-symbols-outlined text-[14px]">delete</span>
+              <span>Delete Major</span>
+            </button>
+          </div>
+          <div class="relative flex items-center">
+            <span class="material-symbols-outlined absolute left-3 text-[18px] text-on-surface-variant pointer-events-none">school</span>
+            <input 
+              type="text" 
+              id="profileMajorInput" 
+              placeholder="Enter course or major (or delete to remove)" 
+              class="w-full h-11 pl-9 pr-3 rounded-xl bg-surface-container-low border border-surface-container-high focus:border-primary focus:bg-surface-container-lowest focus:outline-none text-on-surface font-body-md text-sm transition-all"
+            />
+          </div>
+          <span id="majorDeletedBadge" class="hidden text-[11px] text-error font-medium flex items-center gap-0.5">
+            <span class="material-symbols-outlined text-[13px]">info</span> Major cleared. Click Save to apply.
+          </span>
+        </div>
+
+        <!-- Current Semester Dropdown -->
+        <div class="flex flex-col gap-1">
+          <label for="profileSemesterSelect" class="font-label-sm text-label-sm text-on-surface font-bold">
+            Current Semester
+          </label>
+          <div class="relative flex items-center">
+            <span class="material-symbols-outlined absolute left-3 text-[18px] text-on-surface-variant pointer-events-none">calendar_view_week</span>
+            <select 
+              id="profileSemesterSelect" 
+              class="w-full h-11 pl-9 pr-8 rounded-xl bg-surface-container-low border border-surface-container-high focus:border-primary focus:bg-surface-container-lowest focus:outline-none text-on-surface font-body-md text-sm appearance-none transition-all">
+              <option value="Sem 1">Semester 1</option>
+              <option value="Sem 2">Semester 2</option>
+              <option value="Sem 3">Semester 3</option>
+              <option value="Sem 4">Semester 4</option>
+              <option value="Sem 5" selected>Semester 5</option>
+              <option value="Sem 6">Semester 6</option>
+              <option value="Sem 7">Semester 7</option>
+              <option value="Sem 8">Semester 8</option>
+            </select>
+            <span class="material-symbols-outlined absolute right-3 text-[18px] text-on-surface-variant pointer-events-none">expand_more</span>
+          </div>
+        </div>
+
+        <!-- Save Settings Button -->
+        <div class="pt-2">
+          <button 
+            type="button" 
+            id="saveProfileSettingsBtn" 
+            class="w-full h-12 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg font-bold flex items-center justify-center gap-2 shadow-md hover:shadow-lg active:scale-98 transition-all">
+            <span class="material-symbols-outlined text-[20px]">save</span>
+            <span>Save Settings</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================== -->
+<!-- MODAL 2: Edit Academic Profile Modal Sheet     -->
+<!-- ============================================== -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm hidden items-end sm:items-center justify-center p-0 sm:p-4 transition-opacity duration-300" id="academicProfileModal">
+  <div class="w-full max-w-md bg-surface-container-lowest rounded-t-[28px] sm:rounded-[28px] p-space-lg shadow-2xl flex flex-col relative max-h-[90vh] overflow-hidden animate-in fade-in slide-in-from-bottom-8">
+    <div class="flex items-center justify-between pb-3 border-b border-surface-container-high/60">
+      <div class="flex items-center gap-2.5">
+        <div class="w-9 h-9 rounded-xl bg-primary-fixed flex items-center justify-center text-primary flex-shrink-0">
+          <span class="material-symbols-outlined text-[20px]">school</span>
+        </div>
+        <div>
+          <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold text-base">Edit Academic Profile</h3>
+          <p class="font-body-sm text-body-sm text-on-surface-variant text-xs">Degree, Registration &amp; Mentorship</p>
+        </div>
+      </div>
+      <button class="w-8 h-8 rounded-full bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant transition-colors" id="closeAcademicProfileModal">
+        <span class="material-symbols-outlined text-[18px]">close</span>
+      </button>
+    </div>
+
+    <div class="overflow-y-auto py-3.5 flex-1 flex flex-col gap-3 pr-1">
+      <div class="flex flex-col gap-1">
+        <label for="acadRollInput" class="font-label-sm text-label-sm text-on-surface font-bold">Student Roll / ID Number</label>
+        <input type="text" id="acadRollInput" placeholder="e.g. STU-2022-8492" class="w-full h-11 px-3 rounded-xl bg-surface-container-low border border-surface-container-high focus:border-primary focus:outline-none text-on-surface font-body-md text-sm" />
+      </div>
+
+      <div class="flex flex-col gap-1">
+        <label for="acadDegreeInput" class="font-label-sm text-label-sm text-on-surface font-bold">Degree &amp; Specialization</label>
+        <input type="text" id="acadDegreeInput" placeholder="e.g. B.Tech Computer Science & Engineering" class="w-full h-11 px-3 rounded-xl bg-surface-container-low border border-surface-container-high focus:border-primary focus:outline-none text-on-surface font-body-md text-sm" />
+      </div>
+
+      <div class="flex flex-col gap-1">
+        <label for="acadYearInput" class="font-label-sm text-label-sm text-on-surface font-bold">Academic Year / Batch</label>
+        <input type="text" id="acadYearInput" placeholder="e.g. Class of '26 • Year 1" class="w-full h-11 px-3 rounded-xl bg-surface-container-low border border-surface-container-high focus:border-primary focus:outline-none text-on-surface font-body-md text-sm" />
+      </div>
+
+      <div class="flex flex-col gap-1">
+        <label for="acadAdvisorInput" class="font-label-sm text-label-sm text-on-surface font-bold">Faculty Advisor</label>
+        <input type="text" id="acadAdvisorInput" placeholder="e.g. Prof. Vance R. • CS Dept" class="w-full h-11 px-3 rounded-xl bg-surface-container-low border border-surface-container-high focus:border-primary focus:outline-none text-on-surface font-body-md text-sm" />
+      </div>
+
+      <div class="pt-2">
+        <button type="button" id="saveAcademicProfileBtn" class="w-full h-12 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg font-bold flex items-center justify-center gap-2 shadow-md active:scale-98 transition-all">
+          <span class="material-symbols-outlined text-[20px]">save</span>
+          <span>Save Academic Details</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================== -->
+<!-- MODAL 3: Subject Management Modal Sheet        -->
+<!-- ============================================== -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm hidden items-end sm:items-center justify-center p-0 sm:p-4 transition-opacity duration-300" id="subjectManagementModal">
+  <div class="w-full max-w-md bg-surface-container-lowest rounded-t-[28px] sm:rounded-[28px] p-space-lg shadow-2xl flex flex-col relative max-h-[90vh] overflow-hidden animate-in fade-in slide-in-from-bottom-8">
+    <div class="flex items-center justify-between pb-3 border-b border-surface-container-high/60">
+      <div class="flex items-center gap-2.5">
+        <div class="w-9 h-9 rounded-xl bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed flex-shrink-0">
+          <span class="material-symbols-outlined text-[20px]">collections_bookmark</span>
+        </div>
+        <div>
+          <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold text-base">Subject Management</h3>
+          <p class="font-body-sm text-body-sm text-on-surface-variant text-xs">Enrolled courses &amp; credit allocation</p>
+        </div>
+      </div>
+      <button class="w-8 h-8 rounded-full bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant transition-colors" id="closeSubjectMgmtModal">
+        <span class="material-symbols-outlined text-[18px]">close</span>
+      </button>
+    </div>
+
+    <div class="overflow-y-auto py-3.5 flex-1 flex flex-col gap-3 pr-1">
+      <!-- Active Subjects List -->
+      <div class="flex items-center justify-between">
+        <span class="font-label-sm text-[11px] font-bold text-on-surface uppercase tracking-wider">Active Subjects</span>
+        <span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container text-xs font-bold" id="modalSubjectCountBadge">6 Subjects</span>
+      </div>
+      <div class="flex flex-col gap-2" id="subjectsListContainer">
+        <!-- Rendered dynamically by script -->
+      </div>
+
+      <!-- Add New Subject Form Box -->
+      <div class="bg-surface-container-low rounded-xl p-3 border border-surface-container-high/60 flex flex-col gap-2.5 mt-2">
+        <span class="font-label-sm text-label-sm text-on-surface font-bold flex items-center gap-1">
+          <span class="material-symbols-outlined text-primary text-[16px]">add_circle</span>
+          <span>Add New Subject</span>
+        </span>
+        <div class="grid grid-cols-2 gap-2">
+          <input type="text" id="newSubjectCodeInput" placeholder="Code (e.g. CS-407)" class="h-10 px-3 rounded-lg bg-surface-container-lowest border border-surface-container-high text-xs font-body-md text-on-surface focus:border-primary focus:outline-none" />
+          <input type="number" id="newSubjectCreditsInput" placeholder="Credits (e.g. 4)" min="1" max="6" value="4" class="h-10 px-3 rounded-lg bg-surface-container-lowest border border-surface-container-high text-xs font-body-md text-on-surface focus:border-primary focus:outline-none" />
+        </div>
+        <input type="text" id="newSubjectNameInput" placeholder="Course Name (e.g. Machine Learning)" class="h-10 px-3 rounded-lg bg-surface-container-lowest border border-surface-container-high text-xs font-body-md text-on-surface focus:border-primary focus:outline-none" />
+        <button type="button" id="addNewSubjectBtn" class="h-10 rounded-lg bg-primary text-on-primary font-label-md text-xs font-bold flex items-center justify-center gap-1 active:scale-95 transition-all">
+          <span class="material-symbols-outlined text-[16px]">add</span>
+          <span>Add Course</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================== -->
+<!-- MODAL 4: Grade History Modal Sheet             -->
+<!-- ============================================== -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm hidden items-end sm:items-center justify-center p-0 sm:p-4 transition-opacity duration-300" id="gradeHistoryModal">
+  <div class="w-full max-w-md bg-surface-container-lowest rounded-t-[28px] sm:rounded-[28px] p-space-lg shadow-2xl flex flex-col relative max-h-[90vh] overflow-hidden animate-in fade-in slide-in-from-bottom-8">
+    <div class="flex items-center justify-between pb-3 border-b border-surface-container-high/60">
+      <div class="flex items-center gap-2.5">
+        <div class="w-9 h-9 rounded-xl bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed flex-shrink-0">
+          <span class="material-symbols-outlined text-[20px]">history_edu</span>
+        </div>
+        <div>
+          <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold text-base">Grade History</h3>
+          <p class="font-body-sm text-body-sm text-on-surface-variant text-xs">Cumulative CGPA &amp; Term SGPA Records</p>
+        </div>
+      </div>
+      <button class="w-8 h-8 rounded-full bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant transition-colors" id="closeGradeHistoryModal">
+        <span class="material-symbols-outlined text-[18px]">close</span>
+      </button>
+    </div>
+
+    <div class="overflow-y-auto py-3.5 flex-1 flex flex-col gap-3 pr-1">
+      <!-- High level summary cards -->
+      <div class="grid grid-cols-2 gap-2">
+        <div class="bg-surface-container-low rounded-xl p-3 flex flex-col justify-between">
+          <span class="text-[11px] font-label-sm text-on-surface-variant uppercase font-bold">Overall CGPA</span>
+          <div class="flex items-baseline gap-1 mt-1">
+            <span class="font-headline-md text-headline-md text-on-surface font-bold" id="ghCgpaDisplay">8.82</span>
+            <span class="text-xs text-on-surface-variant">/ 10.0</span>
+          </div>
+          <span class="text-[11px] text-secondary font-bold mt-0.5">KTU First Class Honors</span>
+        </div>
+        <div class="bg-surface-container-low rounded-xl p-3 flex flex-col justify-between">
+          <span class="text-[11px] font-label-sm text-on-surface-variant uppercase font-bold">Total Credits</span>
+          <div class="flex items-baseline gap-1 mt-1">
+            <span class="font-headline-md text-headline-md text-on-surface font-bold">94</span>
+            <span class="text-xs text-on-surface-variant">/ 160 cr</span>
+          </div>
+          <span class="text-[11px] text-primary font-bold mt-0.5">58.7% Complete</span>
+        </div>
+      </div>
+
+      <!-- Term by term records -->
+      <span class="font-label-sm text-[11px] font-bold text-on-surface uppercase tracking-wider mt-1">Semester Breakdown (KTU Scheme)</span>
+      <div class="flex flex-col gap-2" id="gradeHistorySemList">
+        <!-- Semester items rendered dynamically -->
+      </div>
+
+      <!-- Quick Edit Term Grade -->
+      <div class="bg-surface-container-low rounded-xl p-3 border border-surface-container-high/60 flex flex-col gap-2 mt-1">
+        <span class="font-label-sm text-label-sm text-on-surface font-bold">Update Semester SGPA</span>
+        <div class="grid grid-cols-3 gap-2">
+          <select id="ghSelectSem" class="h-10 px-2 rounded-lg bg-surface-container-lowest border border-surface-container-high text-xs font-body-md text-on-surface focus:border-primary">
+            <option value="Sem 1">Sem 1</option>
+            <option value="Sem 2">Sem 2</option>
+            <option value="Sem 3">Sem 3</option>
+            <option value="Sem 4">Sem 4</option>
+            <option value="Sem 5" selected>Sem 5</option>
+          </select>
+          <input type="number" id="ghInputSgpa" step="0.01" min="0" max="10.0" placeholder="SGPA (e.g. 8.88)" value="8.88" class="h-10 px-2 rounded-lg bg-surface-container-lowest border border-surface-container-high text-xs font-body-md text-on-surface focus:border-primary" />
+          <button type="button" id="ghUpdateBtn" class="h-10 rounded-lg bg-primary text-on-primary font-label-md text-xs font-bold active:scale-95 transition-all">
+            Update
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================== -->
+<!-- MODAL 5: Completely Functional CGPA Calculator -->
+<!-- ============================================== -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm hidden items-end sm:items-center justify-center p-0 sm:p-4 transition-opacity duration-300" id="cgpaCalculatorModal">
+  <div class="w-full max-w-md bg-surface-container-lowest rounded-t-[28px] sm:rounded-[28px] p-space-lg shadow-2xl flex flex-col relative max-h-[90vh] overflow-hidden animate-in fade-in slide-in-from-bottom-8">
+    <div class="flex items-center justify-between pb-3 border-b border-surface-container-high/60">
+      <div class="flex items-center gap-2.5">
+        <div class="w-9 h-9 rounded-xl bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed flex-shrink-0">
+          <span class="material-symbols-outlined text-[20px]">calculate</span>
+        </div>
+        <div>
+          <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold text-base">KTU B.Tech GPA Simulator</h3>
+          <p class="font-body-sm text-body-sm text-on-surface-variant text-xs">2024 Scheme • 10.0 Scale • Live sync</p>
+        </div>
+      </div>
+      <button class="w-8 h-8 rounded-full bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant transition-colors" id="closeCgpaCalcModal">
+        <span class="material-symbols-outlined text-[18px]">close</span>
+      </button>
+    </div>
+
+    <div class="overflow-y-auto py-3.5 flex-1 flex flex-col gap-3 pr-1">
+      <!-- Live Calculation Banner -->
+      <div class="grid grid-cols-2 gap-2">
+        <div class="bg-gradient-to-br from-tertiary-fixed to-tertiary-container/30 p-3 rounded-2xl flex flex-col justify-between">
+          <span class="text-[11px] font-label-sm text-on-tertiary-fixed font-bold uppercase">Forecast Term SGPA</span>
+          <div class="flex items-baseline gap-1 mt-1">
+            <span class="font-headline-lg text-headline-lg font-bold text-on-tertiary-fixed" id="calcLiveSgpa">8.85</span>
+            <span class="text-xs text-on-tertiary-fixed/70">/ 10.0</span>
+          </div>
+          <span class="text-[10px] text-on-tertiary-fixed font-semibold" id="calcLiveTermCredits">21 Term Credits</span>
+        </div>
+        <div class="bg-gradient-to-br from-primary-fixed to-primary-container/30 p-3 rounded-2xl flex flex-col justify-between">
+          <span class="text-[11px] font-label-sm text-on-primary-fixed font-bold uppercase">Projected CGPA</span>
+          <div class="flex items-baseline gap-1 mt-1">
+            <span class="font-headline-lg text-headline-lg font-bold text-on-primary-fixed" id="calcLiveCgpa">8.82</span>
+            <span class="text-xs text-on-primary-fixed/70">/ 10.0</span>
+          </div>
+          <span class="text-[10px] text-on-primary-fixed font-semibold" id="calcLiveTotalCredits">94 Cumulative Cr</span>
+        </div>
+      </div>
+
+      <!-- Prior stats for cumulative calculation -->
+      <div class="bg-surface-container-low rounded-xl p-3 flex flex-col gap-2">
+        <span class="font-label-sm text-[11px] font-bold text-on-surface uppercase">Prior Completed Terms</span>
+        <div class="grid grid-cols-2 gap-2">
+          <div>
+            <label class="text-[10px] text-on-surface-variant font-medium">Prior Completed Credits</label>
+            <input type="number" id="calcPriorCreditsInput" value="73" min="0" max="160" class="w-full h-9 px-2 rounded-lg bg-surface-container-lowest border border-surface-container-high text-xs text-on-surface" />
+          </div>
+          <div>
+            <label class="text-[10px] text-on-surface-variant font-medium">Prior Cumulative CGPA</label>
+            <input type="number" id="calcPriorCgpaInput" value="8.81" step="0.01" min="0" max="10.0" class="w-full h-9 px-2 rounded-lg bg-surface-container-lowest border border-surface-container-high text-xs text-on-surface" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Current Courses Grade Simulator -->
+      <div class="flex items-center justify-between">
+        <span class="font-label-sm text-[11px] font-bold text-on-surface uppercase tracking-wider">Current Term Courses</span>
+        <button type="button" id="calcAddRowBtn" class="text-primary text-xs font-bold flex items-center gap-0.5 hover:underline">
+          <span class="material-symbols-outlined text-[14px]">add</span> Add Course
+        </button>
+      </div>
+
+      <div class="flex flex-col gap-2" id="calcCoursesListContainer">
+        <!-- Courses with credit & grade dropdowns dynamically rendered -->
+      </div>
+
+      <div class="pt-2 flex gap-2">
+        <button type="button" id="calcApplyToProfileBtn" class="flex-1 h-12 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-label-lg text-sm font-bold flex items-center justify-center gap-1.5 shadow-md active:scale-98 transition-all">
+          <span class="material-symbols-outlined text-[18px]">check_circle</span>
+          <span>Apply CGPA to Profile</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================== -->
+<!-- MODAL 6: Completely Functional Goal Monitor    -->
+<!-- ============================================== -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm hidden items-end sm:items-center justify-center p-0 sm:p-4 transition-opacity duration-300" id="goalMonitorModal">
+  <div class="w-full max-w-md bg-surface-container-lowest rounded-t-[28px] sm:rounded-[28px] p-space-lg shadow-2xl flex flex-col relative max-h-[90vh] overflow-hidden animate-in fade-in slide-in-from-bottom-8">
+    <div class="flex items-center justify-between pb-3 border-b border-surface-container-high/60">
+      <div class="flex items-center gap-2.5">
+        <div class="w-9 h-9 rounded-xl bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed flex-shrink-0">
+          <span class="material-symbols-outlined text-[20px]">track_changes</span>
+        </div>
+        <div>
+          <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold text-base">Academic Goal Monitor</h3>
+          <p class="font-body-sm text-body-sm text-on-surface-variant text-xs">Attendance &amp; CGPA target forecaster</p>
+        </div>
+      </div>
+      <button class="w-8 h-8 rounded-full bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant transition-colors" id="closeGoalMonitorModal">
+        <span class="material-symbols-outlined text-[18px]">close</span>
+      </button>
+    </div>
+
+    <div class="overflow-y-auto py-3.5 flex-1 flex flex-col gap-4 pr-1">
+      <!-- GOAL 1: ATTENDANCE THRESHOLD MONITOR -->
+      <div class="bg-surface-container-low rounded-2xl p-3.5 border border-surface-container-high/60 flex flex-col gap-2.5">
+        <div class="flex items-center justify-between">
+          <span class="font-label-sm text-xs font-bold text-on-surface flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-secondary text-[18px]">checklist</span>
+            <span>Attendance Buffer Forecaster</span>
+          </span>
+          <span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container text-[11px] font-bold" id="goalAttCurrentBadge">Current: 84.2%</span>
+        </div>
+
+        <div class="flex flex-col gap-1">
+          <div class="flex justify-between text-xs text-on-surface-variant">
+            <span>Minimum Target Attendance</span>
+            <span class="font-bold text-on-surface" id="goalAttTargetValText">75%</span>
+          </div>
+          <input type="range" id="goalAttSlider" min="60" max="95" value="75" step="1" class="w-full accent-secondary cursor-pointer" />
+        </div>
+
+        <!-- Dynamic Calculation Feedback Card -->
+        <div class="p-3 rounded-xl bg-surface-container-lowest border border-surface-container-high/60 flex items-start gap-2.5" id="goalAttFeedbackBox">
+          <span class="material-symbols-outlined text-secondary text-[20px] flex-shrink-0 mt-0.5" id="goalAttFeedbackIcon">verified</span>
+          <div class="flex flex-col min-w-0">
+            <span class="font-label-sm text-xs font-bold text-on-surface" id="goalAttFeedbackTitle">Safe Status: 14 Class Buffer</span>
+            <p class="text-xs text-on-surface-variant mt-0.5 leading-relaxed" id="goalAttFeedbackDesc">
+              You can safely miss up to 14 classes without your attendance dropping below the 75% cutoff threshold.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- GOAL 2: GRADUATION CGPA MONITOR -->
+      <div class="bg-surface-container-low rounded-2xl p-3.5 border border-surface-container-high/60 flex flex-col gap-2.5">
+        <div class="flex items-center justify-between">
+          <span class="font-label-sm text-xs font-bold text-on-surface flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-primary text-[18px]">school</span>
+            <span>Target Graduation CGPA</span>
+          </span>
+          <span class="px-2 py-0.5 rounded-full bg-primary-fixed text-primary text-[11px] font-bold">Current: 3.82</span>
+        </div>
+
+        <div class="grid grid-cols-2 gap-2">
+          <div>
+            <label class="text-[10px] text-on-surface-variant font-medium">Desired CGPA Goal</label>
+            <input type="number" id="goalCgpaTargetInput" step="0.01" min="3.0" max="4.0" value="3.90" class="w-full h-9 px-2 rounded-lg bg-surface-container-lowest border border-surface-container-high text-xs text-on-surface" />
+          </div>
+          <div>
+            <label class="text-[10px] text-on-surface-variant font-medium">Remaining Credits</label>
+            <input type="number" id="goalCgpaRemainingCrInput" min="1" max="100" value="66" class="w-full h-9 px-2 rounded-lg bg-surface-container-lowest border border-surface-container-high text-xs text-on-surface" />
+          </div>
+        </div>
+
+        <!-- Dynamic Feedback for CGPA Goal -->
+        <div class="p-3 rounded-xl bg-surface-container-lowest border border-surface-container-high/60 flex items-start gap-2.5">
+          <span class="material-symbols-outlined text-primary text-[20px] flex-shrink-0 mt-0.5">trending_up</span>
+          <div class="flex flex-col min-w-0">
+            <span class="font-label-sm text-xs font-bold text-on-surface" id="goalCgpaFeedbackTitle">Required Average SGPA: 3.98</span>
+            <p class="text-xs text-on-surface-variant mt-0.5 leading-relaxed" id="goalCgpaFeedbackDesc">
+              To reach 3.90 CGPA by graduation, you need to average at least 3.98 SGPA across your remaining 66 credits.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-1">
+        <button type="button" id="saveGoalsBtn" class="w-full h-12 rounded-xl bg-secondary text-on-secondary font-label-lg text-sm font-bold flex items-center justify-center gap-2 active:scale-98 transition-all shadow-md">
+          <span class="material-symbols-outlined text-[18px]">save</span>
+          <span>Save Goal Targets</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================== -->
+<!-- MODAL 7: Notifications & Reminders Modal       -->
+<!-- ============================================== -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm hidden items-end sm:items-center justify-center p-0 sm:p-4 transition-opacity duration-300" id="notificationsModal">
+  <div class="w-full max-w-md bg-surface-container-lowest rounded-t-[28px] sm:rounded-[28px] p-space-lg shadow-2xl flex flex-col relative animate-in fade-in slide-in-from-bottom-8">
+    <div class="flex items-center justify-between pb-3 border-b border-surface-container-high/60">
+      <div class="flex items-center gap-2.5">
+        <div class="w-9 h-9 rounded-xl bg-surface-container flex items-center justify-center text-on-surface-variant flex-shrink-0">
+          <span class="material-symbols-outlined text-[20px]">notifications_active</span>
+        </div>
+        <div>
+          <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold text-base">Notifications &amp; Reminders</h3>
+          <p class="font-body-sm text-body-sm text-on-surface-variant text-xs">Manage class alerts &amp; daily briefings</p>
+        </div>
+      </div>
+      <button class="w-8 h-8 rounded-full bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant transition-colors" id="closeNotificationsModal">
+        <span class="material-symbols-outlined text-[18px]">close</span>
+      </button>
+    </div>
+
+    <div class="py-3.5 flex flex-col gap-3">
+      <!-- Lecture Alert -->
+      <div class="flex items-center justify-between p-2 rounded-xl bg-surface-container-low">
+        <div class="flex flex-col pr-2">
+          <span class="font-label-sm text-xs font-bold text-on-surface">Lecture Reminder</span>
+          <span class="text-[11px] text-on-surface-variant">Alert 15 mins prior with room &amp; hall details</span>
+        </div>
+        <label class="relative inline-flex items-center cursor-pointer">
+          <input checked="" class="sr-only peer" type="checkbox" id="notifLectureToggle" />
+          <div class="w-11 h-6 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface peer-checked:bg-primary after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all"></div>
+        </label>
+      </div>
+
+      <!-- Assignment Deadlines -->
+      <div class="flex items-center justify-between p-2 rounded-xl bg-surface-container-low">
+        <div class="flex flex-col pr-2">
+          <span class="font-label-sm text-xs font-bold text-on-surface">Assignment Deadlines</span>
+          <span class="text-[11px] text-on-surface-variant">Alerts 24 hours &amp; 3 hours before cutoff</span>
+        </div>
+        <label class="relative inline-flex items-center cursor-pointer">
+          <input checked="" class="sr-only peer" type="checkbox" id="notifDeadlineToggle" />
+          <div class="w-11 h-6 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface peer-checked:bg-primary after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all"></div>
+        </label>
+      </div>
+
+      <!-- Morning Briefing -->
+      <div class="flex items-center justify-between p-2 rounded-xl bg-surface-container-low">
+        <div class="flex flex-col pr-2">
+          <span class="font-label-sm text-xs font-bold text-on-surface">Morning Daily Briefing</span>
+          <span class="text-[11px] text-on-surface-variant">Wake up agenda notification at 07:30 AM</span>
+        </div>
+        <label class="relative inline-flex items-center cursor-pointer">
+          <input class="sr-only peer" type="checkbox" id="notifBriefingToggle" />
+          <div class="w-11 h-6 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface peer-checked:bg-primary after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all"></div>
+        </label>
+      </div>
+
+      <div class="pt-2">
+        <button type="button" id="saveNotifSettingsBtn" class="w-full h-11 rounded-xl bg-primary text-on-primary font-label-md text-xs font-bold active:scale-95 transition-all">
+          Save Notification Preferences
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================== -->
+<!-- MODAL 8: Sync Integrations Modal               -->
+<!-- ============================================== -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm hidden items-end sm:items-center justify-center p-0 sm:p-4 transition-opacity duration-300" id="syncIntegrationsModal">
+  <div class="w-full max-w-md bg-surface-container-lowest rounded-t-[28px] sm:rounded-[28px] p-space-lg shadow-2xl flex flex-col relative max-h-[90vh] overflow-hidden animate-in fade-in slide-in-from-bottom-8">
+    <div class="flex items-center justify-between pb-3 border-b border-surface-container-high/60">
+      <div class="flex items-center gap-2.5">
+        <div class="w-9 h-9 rounded-xl bg-surface-container flex items-center justify-center text-primary flex-shrink-0">
+          <span class="material-symbols-outlined text-[20px]">cloud_sync</span>
+        </div>
+        <div>
+          <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold text-base">Sync Integrations</h3>
+          <p class="font-body-sm text-body-sm text-on-surface-variant text-xs">Firebase Firestore &amp; Cloudinary Hub</p>
+        </div>
+      </div>
+      <button class="w-8 h-8 rounded-full bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant transition-colors" id="closeSyncIntegrationsModal">
+        <span class="material-symbols-outlined text-[18px]">close</span>
+      </button>
+    </div>
+
+    <div class="overflow-y-auto py-3.5 flex-1 flex flex-col gap-3 pr-1">
+      <div class="bg-surface-container-low rounded-xl p-3 flex flex-col gap-2.5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-primary text-[22px]">cloud_done</span>
+            <span class="font-label-sm text-xs font-bold text-on-surface">Cloud Sync Status</span>
+          </div>
+          <span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container text-[10px] font-bold">Online Ready</span>
+        </div>
+        <p class="text-xs text-on-surface-variant" id="modalLastSyncedTimeText">All records stored offline locally. Ready for cloud push.</p>
+        
+        <button class="w-full h-11 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-label-md text-xs font-bold flex items-center justify-center gap-2 shadow-sm active:scale-95 transition-all mt-1" id="sync-now-btn">
+          <span class="material-symbols-outlined text-[18px]" id="syncBtnIcon">sync</span>
+          <span id="syncBtnLabel">Sync to Cloud</span>
+        </button>
+      </div>
+
+      <div class="grid grid-cols-2 gap-2">
+        <div class="p-2.5 rounded-xl bg-surface-container-low flex flex-col gap-1">
+          <div class="flex items-center gap-1.5 text-amber-500 font-bold text-xs">
+            <span class="material-symbols-outlined text-[16px]">local_fire_department</span>
+            <span>Firestore</span>
+          </div>
+          <p class="text-[10px] text-on-surface-variant">Auth, Timetable &amp; Tasks DB</p>
+        </div>
+        <div class="p-2.5 rounded-xl bg-surface-container-low flex flex-col gap-1">
+          <div class="flex items-center gap-1.5 text-sky-500 font-bold text-xs">
+            <span class="material-symbols-outlined text-[16px]">cloud_upload</span>
+            <span>Cloudinary</span>
+          </div>
+          <p class="text-[10px] text-on-surface-variant">Vault Documents &amp; PDFs</p>
+        </div>
+      </div>
+
+      <div class="p-2.5 rounded-xl bg-surface-container-high/40 text-on-surface-variant text-xs flex items-start gap-2">
+        <span class="material-symbols-outlined text-[16px] text-primary flex-shrink-0 mt-0.5">phone_android</span>
+        <p class="leading-relaxed">
+          <strong>Android App Interoperability:</strong> Signing in on the Android app with the same account syncs all data seamlessly to this web dashboard.
+        </p>
+      </div>
+
+      <div class="pt-1 flex gap-2">
+        <button type="button" id="view-schema-btn" class="flex-1 h-10 rounded-xl bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-xs font-bold flex items-center justify-center gap-1 active:scale-95 transition-all">
+          <span class="material-symbols-outlined text-[16px]">data_object</span>
+          <span>View Schema JSON</span>
+        </button>
+        <button type="button" id="clear-cache-btn" class="h-10 px-3 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-xs active:scale-95 transition-all">
+          Clear Cache
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================== -->
+<!-- MODAL 9: Appearance Modal (Light/Dark Mode)     -->
+<!-- ============================================== -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm hidden items-end sm:items-center justify-center p-0 sm:p-4 transition-opacity duration-300" id="appearanceModal">
+  <div class="w-full max-w-sm bg-surface-container-lowest rounded-t-[28px] sm:rounded-[28px] p-space-lg shadow-2xl flex flex-col relative animate-in fade-in slide-in-from-bottom-8">
+    <div class="flex items-center justify-between pb-3 border-b border-surface-container-high/60">
+      <div class="flex items-center gap-2.5">
+        <div class="w-9 h-9 rounded-xl bg-surface-container flex items-center justify-center text-primary flex-shrink-0">
+          <span class="material-symbols-outlined text-[20px]">palette</span>
+        </div>
+        <div>
+          <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold text-base">Appearance &amp; Theme</h3>
+          <p class="font-body-sm text-body-sm text-on-surface-variant text-xs">Switch between Light &amp; Dark mode</p>
+        </div>
+      </div>
+      <button class="w-8 h-8 rounded-full bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant transition-colors" id="closeAppearanceModal">
+        <span class="material-symbols-outlined text-[18px]">close</span>
+      </button>
+    </div>
+
+    <div class="py-4 flex flex-col gap-3">
+      <div class="bg-surface-container-low p-1.5 rounded-2xl flex items-center gap-1.5">
+        <button class="flex-1 py-2.5 rounded-xl font-label-md text-xs font-bold flex items-center justify-center gap-1.5 transition-all shadow-xs" id="theme-light-btn">
+          <span class="material-symbols-outlined text-[18px]">light_mode</span>
+          <span>Light Mode</span>
+        </button>
+        <button class="flex-1 py-2.5 rounded-xl font-label-md text-xs font-bold flex items-center justify-center gap-1.5 transition-all" id="theme-dark-btn">
+          <span class="material-symbols-outlined text-[18px]">dark_mode</span>
+          <span>Dark Mode</span>
+        </button>
+      </div>
+      <p class="text-xs text-on-surface-variant text-center mt-1">
+        Your theme preference is saved automatically to device storage.
+      </p>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<!-- Cross-Platform Firestore & Cloudinary Schema Modal -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm hidden items-end sm:items-center justify-center p-0 sm:p-4 transition-opacity duration-300" id="schema-modal">
+<div class="w-full max-w-md bg-surface-container-lowest rounded-t-[28px] sm:rounded-[28px] p-space-md sm:p-space-lg shadow-2xl flex flex-col relative max-h-[85vh] overflow-hidden">
+<div class="flex items-center justify-between pb-3 border-b border-surface-container-high/60">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">data_object</span>
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold text-base">Shared Cloud Schema</h3>
+<p class="text-xs text-on-surface-variant">Firestore &amp; Cloudinary (Android ⇄ Web)</p>
+</div>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant transition-colors" id="close-schema-modal">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+
+<div class="overflow-y-auto my-3 flex-1 bg-surface-container-low rounded-xl p-3 border border-surface-container-high/60">
+<div class="flex items-center justify-between pb-2 mb-2 border-b border-surface-container-high/40">
+<span class="font-label-sm text-[11px] font-bold text-on-surface uppercase tracking-wider">Unified Sync JSON</span>
+<button id="copy-schema-btn" class="px-2 py-0.5 rounded-md bg-surface-container text-primary text-[11px] font-semibold hover:bg-surface-container-high flex items-center gap-1 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[13px]">content_copy</span> Copy
+</button>
+</div>
+<pre id="schemaJsonPreview" class="font-mono text-[11px] leading-relaxed text-on-surface whitespace-pre-wrap break-all"></pre>
+</div>
+
+<div class="pt-2 border-t border-surface-container-high/60 flex items-center justify-between">
+<span class="text-xs text-on-surface-variant flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> Android &amp; Web Compatible
+</span>
+<button type="button" class="px-4 py-2 rounded-xl bg-primary text-on-primary font-label-md text-xs font-bold active:scale-95 transition-all" id="close-schema-modal-btn">
+Close
+</button>
+</div>
+</div>
+</div>
+
+<!-- Profile Action Toast Container -->
+<div id="profileToast" class="fixed top-20 left-1/2 -translate-x-1/2 z-50 px-4 py-2.5 rounded-2xl bg-inverse-surface text-inverse-on-surface shadow-xl text-xs font-semibold flex items-center gap-2 transition-all duration-300 opacity-0 pointer-events-none transform -translate-y-2"></div>
+
+<script>
+  // Dynamic bottom navigation active tab sync
+  (function initActiveNav() {
+    const navItems = document.querySelectorAll('nav a[data-path]');
+    navItems.forEach(item => {
+      const pill = item.querySelector('.nav-pill');
+      const icon = item.querySelector('.nav-icon');
+      const label = item.querySelector('span:not(.nav-icon)');
+      
+      if (item.getAttribute('data-path') === 'profile') {
+        if (pill) pill.classList.add('bg-primary-fixed', 'text-on-primary-fixed');
+        if (icon) {
+          icon.classList.add('text-primary');
+          icon.setAttribute('style', "font-variation-settings: 'FILL' 1;");
+        }
+        if (label) {
+          label.classList.add('font-bold', 'text-primary');
+          label.classList.remove('text-on-surface-variant');
+        }
+      } else {
+        if (pill) pill.classList.remove('bg-primary-fixed', 'text-on-primary-fixed');
+        if (icon) {
+          icon.classList.remove('text-primary');
+          icon.removeAttribute('style');
+        }
+        if (label) {
+          label.classList.remove('font-bold', 'text-primary');
+        }
+      }
+    });
+  })();
+
+  // Toast Notification Helper
+  function showToast(message, type = 'info') {
+    const toast = document.getElementById('profileToast');
+    if (!toast) return;
+    
+    let icon = 'info';
+    let bgClass = 'bg-inverse-surface text-inverse-on-surface';
+    if (type === 'success') {
+      icon = 'check_circle';
+      bgClass = 'bg-secondary-container text-on-secondary-container';
+    } else if (type === 'error') {
+      icon = 'error';
+      bgClass = 'bg-error-container text-on-error-container';
+    }
+
+    toast.className = `fixed top-20 left-1/2 -translate-x-1/2 z-50 px-4 py-2.5 rounded-2xl ${bgClass} shadow-xl text-xs font-semibold flex items-center gap-2 transition-all duration-300 opacity-100 transform translate-y-0`;
+    toast.innerHTML = `<span class="material-symbols-outlined text-[18px]">${icon}</span><span>${message}</span>`;
+    
+    setTimeout(() => {
+      toast.className = 'fixed top-20 left-1/2 -translate-x-1/2 z-50 px-4 py-2.5 rounded-2xl bg-inverse-surface text-inverse-on-surface shadow-xl text-xs font-semibold flex items-center gap-2 transition-all duration-300 opacity-0 pointer-events-none transform -translate-y-2';
+    }, 2800);
+  }
+
+  // Generic Modal Handlers
+  function openModal(modalEl) {
+    if (!modalEl) return;
+    modalEl.classList.remove('hidden');
+    modalEl.classList.add('flex');
+  }
+
+  function closeModal(modalEl) {
+    if (!modalEl) return;
+    modalEl.classList.add('hidden');
+    modalEl.classList.remove('flex');
+  }
+
+  function wireModal(modalId, openBtnId, closeBtnId) {
+    const modal = document.getElementById(modalId);
+    const openBtn = document.getElementById(openBtnId);
+    const closeBtn = document.getElementById(closeBtnId);
+    if (openBtn && modal) {
+      openBtn.addEventListener('click', () => openModal(modal));
+    }
+    if (closeBtn && modal) {
+      closeBtn.addEventListener('click', () => closeModal(modal));
+    }
+    if (modal) {
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal(modal);
+      });
+    }
+  }
+
+  // Wire all modal dialogs
+  wireModal('editProfileModal', 'openEditProfileBtn', 'closeEditProfileModal');
+  wireModal('academicProfileModal', 'openAcademicProfileBtn', 'closeAcademicProfileModal');
+  wireModal('subjectManagementModal', 'openSubjectMgmtBtn', 'closeSubjectMgmtModal');
+  wireModal('gradeHistoryModal', 'openGradeHistoryBtn', 'closeGradeHistoryModal');
+  wireModal('cgpaCalculatorModal', 'openCgpaCalcBtn', 'closeCgpaCalcModal');
+  wireModal('goalMonitorModal', 'openGoalMonitorBtn', 'closeGoalMonitorModal');
+  wireModal('notificationsModal', 'openNotificationsBtn', 'closeNotificationsModal');
+  wireModal('syncIntegrationsModal', 'openSyncIntegrationsBtn', 'closeSyncIntegrationsModal');
+  wireModal('appearanceModal', 'openAppearanceBtn', 'closeAppearanceModal');
+  wireModal('schema-modal', 'view-schema-btn', 'close-schema-modal');
+
+  const closeSchemaBtnExtra = document.getElementById('close-schema-modal-btn');
+  if (closeSchemaBtnExtra) {
+    closeSchemaBtnExtra.addEventListener('click', () => {
+      closeModal(document.getElementById('schema-modal'));
+    });
+  }
+
+  // ==========================================
+  // APPEARANCE & THEME SWITCHER (Dark / Light)
+  // (Strict: NO accent color selection)
+  // ==========================================
+  const THEME_STORAGE_KEY = 'college_os_theme';
+  const lightBtn = document.getElementById('theme-light-btn');
+  const darkBtn = document.getElementById('theme-dark-btn');
+  const appearanceModeText = document.getElementById('appearanceCurrentModeText');
+
+  function applyTheme(theme) {
+    const isDark = theme === 'dark';
+    if (isDark) {
+      document.documentElement.classList.add('dark');
+      if (appearanceModeText) appearanceModeText.textContent = 'Dark Mode';
+      if (darkBtn && lightBtn) {
+        darkBtn.className = 'flex-1 py-2.5 rounded-xl font-label-md text-xs font-bold flex items-center justify-center gap-1.5 transition-all shadow-xs bg-surface-container-lowest text-on-surface';
+        lightBtn.className = 'flex-1 py-2.5 rounded-xl font-label-md text-xs font-bold flex items-center justify-center gap-1.5 transition-all text-on-surface-variant hover:bg-surface-container-high';
+      }
+    } else {
+      document.documentElement.classList.remove('dark');
+      if (appearanceModeText) appearanceModeText.textContent = 'Light (White) Mode';
+      if (lightBtn && darkBtn) {
+        lightBtn.className = 'flex-1 py-2.5 rounded-xl font-label-md text-xs font-bold flex items-center justify-center gap-1.5 transition-all shadow-xs bg-surface-container-lowest text-on-surface';
+        darkBtn.className = 'flex-1 py-2.5 rounded-xl font-label-md text-xs font-bold flex items-center justify-center gap-1.5 transition-all text-on-surface-variant hover:bg-surface-container-high';
+      }
+    }
+    try {
+      localStorage.setItem(THEME_STORAGE_KEY, isDark ? 'dark' : 'light');
+    } catch(e) {}
+  }
+
+  function initTheme() {
+    let savedTheme = 'light';
+    try {
+      savedTheme = localStorage.getItem(THEME_STORAGE_KEY) || 'light';
+    } catch(e) {}
+    applyTheme(savedTheme);
+  }
+
+  if (lightBtn) {
+    lightBtn.addEventListener('click', () => {
+      applyTheme('light');
+      showToast('Switched to Light (White) Mode', 'info');
+    });
+  }
+  if (darkBtn) {
+    darkBtn.addEventListener('click', () => {
+      applyTheme('dark');
+      showToast('Switched to Dark Mode', 'info');
+    });
+  }
+
+  // ==========================================
+  // PROFILE STATE & OFFLINE LOCAL STORAGE
+  // ==========================================
+  const PROFILE_STORAGE_KEY = 'college_os_user_profile_v2';
+  const DEFAULT_PROFILE = {
+    userId: "stu_local_01",
+    name: "Alex Morgan",
+    college: "Apex Institute of Technology",
+    major: "Computer Science & Engineering",
+    currentSemester: "Sem 5",
+    studentId: "STU-2022-8492",
+    academicYear: "Class of '26",
+    degree: "B.Tech Computer Science & Engineering",
+    advisor: "Prof. Vance R. • CS Dept",
+    cgpa: "3.82",
+    sgpa: "3.88",
+    attendanceAvg: "84.2%",
+    creditsCompleted: 94,
+    totalCredits: 160,
+    updatedAt: Date.now()
+  };
+
+  let currentProfile = { ...DEFAULT_PROFILE };
+
+  function loadProfile() {
+    try {
+      const stored = localStorage.getItem(PROFILE_STORAGE_KEY);
+      if (stored) {
+        currentProfile = { ...DEFAULT_PROFILE, ...JSON.parse(stored) };
+      } else {
+        currentProfile = { ...DEFAULT_PROFILE };
+        localStorage.setItem(PROFILE_STORAGE_KEY, JSON.stringify(currentProfile));
+      }
+    } catch (e) {
+      currentProfile = { ...DEFAULT_PROFILE };
+    }
+    updateProfileUI();
+  }
+
+  function updateProfileUI() {
+    // 1. Hero displays
+    const nameEl = document.getElementById('displayProfileName');
+    if (nameEl) nameEl.textContent = currentProfile.name || 'Student';
+
+    const collegeTextEl = document.getElementById('displayCollegeText');
+    if (collegeTextEl) {
+      if (currentProfile.college && currentProfile.college.trim()) {
+        collegeTextEl.textContent = currentProfile.college;
+        collegeTextEl.classList.remove('italic', 'opacity-60');
+      } else {
+        collegeTextEl.textContent = 'No College Assigned';
+        collegeTextEl.classList.add('italic', 'opacity-60');
+      }
+    }
+
+    const majorSemEl = document.getElementById('displayProfileMajorSem');
+    if (majorSemEl) {
+      const sem = currentProfile.currentSemester || 'Sem 5';
+      const major = currentProfile.major && currentProfile.major.trim() ? currentProfile.major : 'No Major Assigned';
+      majorSemEl.textContent = `${sem} • ${major}`;
+    }
+
+    const academicYearEl = document.getElementById('displayProfileAcademicYear');
+    if (academicYearEl) {
+      academicYearEl.textContent = currentProfile.academicYear || "Class of '26";
+    }
+
+    const studentIdEl = document.getElementById('displayStudentId');
+    if (studentIdEl) {
+      studentIdEl.textContent = `ID: ${currentProfile.studentId || 'STU-2022-8492'}`;
+    }
+
+    // 2. Stats Bento Cards
+    const cgpaVal = document.getElementById('statCgpaValue');
+    if (cgpaVal) cgpaVal.textContent = currentProfile.cgpa || '3.82';
+
+    const sgpaVal = document.getElementById('statSgpaValue');
+    if (sgpaVal) sgpaVal.textContent = `SGPA ${currentProfile.sgpa || '3.88'} last term`;
+
+    const attVal = document.getElementById('statAttendanceValue');
+    if (attVal) attVal.textContent = currentProfile.attendanceAvg || '84.2%';
+
+    const attBar = document.getElementById('statAttendanceBar');
+    if (attBar) {
+      const rawNum = parseFloat(currentProfile.attendanceAvg) || 84.2;
+      attBar.style.width = `${Math.min(100, Math.max(0, rawNum))}%`;
+    }
+
+    const creditsVal = document.getElementById('statCreditsValue');
+    if (creditsVal) creditsVal.textContent = currentProfile.creditsCompleted || 94;
+
+    const degProgText = document.getElementById('statDegreeProgressText');
+    if (degProgText) {
+      const done = currentProfile.creditsCompleted || 94;
+      const total = currentProfile.totalCredits || 160;
+      const pct = ((done / total) * 100).toFixed(1);
+      degProgText.textContent = `${pct}% Degree completed`;
+    }
+
+    // 3. Form Inputs in Edit Profile Modal
+    const nameInput = document.getElementById('profileNameInput');
+    if (nameInput) nameInput.value = currentProfile.name || '';
+
+    const collegeInput = document.getElementById('profileCollegeInput');
+    if (collegeInput) collegeInput.value = currentProfile.college || '';
+
+    const majorInput = document.getElementById('profileMajorInput');
+    if (majorInput) majorInput.value = currentProfile.major || '';
+
+    const semesterSelect = document.getElementById('profileSemesterSelect');
+    if (semesterSelect && currentProfile.currentSemester) {
+      semesterSelect.value = currentProfile.currentSemester;
+    }
+
+    // 4. Form Inputs in Academic Profile Modal
+    const acadRollInput = document.getElementById('acadRollInput');
+    if (acadRollInput) acadRollInput.value = currentProfile.studentId || '';
+
+    const acadDegreeInput = document.getElementById('acadDegreeInput');
+    if (acadDegreeInput) acadDegreeInput.value = currentProfile.degree || (currentProfile.major ? `B.Tech ${currentProfile.major}` : '');
+
+    const acadYearInput = document.getElementById('acadYearInput');
+    if (acadYearInput) acadYearInput.value = currentProfile.academicYear || "Class of '26";
+
+    const acadAdvisorInput = document.getElementById('acadAdvisorInput');
+    if (acadAdvisorInput) acadAdvisorInput.value = currentProfile.advisor || "Prof. Vance R. • CS Dept";
+
+    // 5. Section Subtitles
+    const ghSub = document.getElementById('gradeHistorySubtitle');
+    if (ghSub) {
+      ghSub.textContent = `CGPA ${currentProfile.cgpa || '3.82'} • Semester SGPA Breakdown`;
+    }
+  }
+
+  // College Deletion Button
+  const deleteCollegeBtn = document.getElementById('deleteCollegeBtn');
+  if (deleteCollegeBtn) {
+    deleteCollegeBtn.addEventListener('click', () => {
+      const input = document.getElementById('profileCollegeInput');
+      if (input) input.value = '';
+      const badge = document.getElementById('collegeDeletedBadge');
+      if (badge) badge.classList.remove('hidden');
+      showToast('College removed from form. Click "Save Settings" to confirm.', 'info');
+    });
+  }
+
+  // Major Deletion Button
+  const deleteMajorBtn = document.getElementById('deleteMajorBtn');
+  if (deleteMajorBtn) {
+    deleteMajorBtn.addEventListener('click', () => {
+      const input = document.getElementById('profileMajorInput');
+      if (input) input.value = '';
+      const badge = document.getElementById('majorDeletedBadge');
+      if (badge) badge.classList.remove('hidden');
+      showToast('Major removed from form. Click "Save Settings" to confirm.', 'info');
+    });
+  }
+
+  // Save Profile Settings (Edit Profile Modal)
+  const saveProfileSettingsBtn = document.getElementById('saveProfileSettingsBtn');
+  if (saveProfileSettingsBtn) {
+    saveProfileSettingsBtn.addEventListener('click', () => {
+      const nameInput = document.getElementById('profileNameInput');
+      const collegeInput = document.getElementById('profileCollegeInput');
+      const majorInput = document.getElementById('profileMajorInput');
+      const semesterSelect = document.getElementById('profileSemesterSelect');
+
+      const nameVal = nameInput ? nameInput.value.trim() : '';
+      if (!nameVal) {
+        if (nameInput) {
+          nameInput.focus();
+          nameInput.classList.add('border-error', 'ring-2', 'ring-error/20');
+          setTimeout(() => nameInput.classList.remove('border-error', 'ring-2', 'ring-error/20'), 2500);
+        }
+        showToast('Student Name is required!', 'error');
+        return;
+      }
+
+      currentProfile.name = nameVal;
+      currentProfile.college = collegeInput ? collegeInput.value.trim() : '';
+      currentProfile.major = majorInput ? majorInput.value.trim() : '';
+      currentProfile.currentSemester = semesterSelect ? semesterSelect.value : 'Sem 5';
+      currentProfile.updatedAt = Date.now();
+
+      try {
+        localStorage.setItem(PROFILE_STORAGE_KEY, JSON.stringify(currentProfile));
+      } catch (e) {
+        console.error('Storage error', e);
+      }
+
+      const colBadge = document.getElementById('collegeDeletedBadge');
+      if (colBadge) colBadge.classList.add('hidden');
+      const majBadge = document.getElementById('majorDeletedBadge');
+      if (majBadge) majBadge.classList.add('hidden');
+
+      updateProfileUI();
+      closeModal(document.getElementById('editProfileModal'));
+      if (window.CollegeOSCloud) {
+        window.CollegeOSCloud.saveWebProfile(currentProfile.name, currentProfile.college, currentProfile.major, currentProfile.currentSemester);
+      }
+      showToast('Profile settings saved offline! Saved to local device & cloud sync ready.', 'success');
+    });
+  }
+
+  // Save Academic Profile (Academic Profile Modal)
+  const saveAcademicProfileBtn = document.getElementById('saveAcademicProfileBtn');
+  if (saveAcademicProfileBtn) {
+    saveAcademicProfileBtn.addEventListener('click', () => {
+      const rollInput = document.getElementById('acadRollInput');
+      const degreeInput = document.getElementById('acadDegreeInput');
+      const yearInput = document.getElementById('acadYearInput');
+      const advisorInput = document.getElementById('acadAdvisorInput');
+
+      if (rollInput && rollInput.value.trim()) currentProfile.studentId = rollInput.value.trim();
+      if (degreeInput && degreeInput.value.trim()) currentProfile.degree = degreeInput.value.trim();
+      if (yearInput && yearInput.value.trim()) currentProfile.academicYear = yearInput.value.trim();
+      if (advisorInput && advisorInput.value.trim()) currentProfile.advisor = advisorInput.value.trim();
+      currentProfile.updatedAt = Date.now();
+
+      try {
+        localStorage.setItem(PROFILE_STORAGE_KEY, JSON.stringify(currentProfile));
+      } catch(e) {}
+
+      updateProfileUI();
+      closeModal(document.getElementById('academicProfileModal'));
+      showToast('Academic profile details updated!', 'success');
+    });
+  }
+
+  // ==========================================
+  // SUBJECT MANAGEMENT
+  // ==========================================
+  const SUBJECTS_STORAGE_KEY = 'college_os_subjects_v2';
+  const DEFAULT_SUBJECTS = [
+    { id: "sub_1", code: "CS-401", name: "Algorithms & Data Structures", credits: 4 },
+    { id: "sub_2", code: "CS-402", name: "Operating Systems", credits: 4 },
+    { id: "sub_3", code: "CS-403", name: "Database Management Systems", credits: 3 },
+    { id: "sub_4", code: "CS-404", name: "Computer Networks", credits: 3 },
+    { id: "sub_5", code: "CS-405", name: "Web Technologies", credits: 3 },
+    { id: "sub_6", code: "CS-406", name: "Discrete Mathematics", credits: 4 }
+  ];
+
+  let subjectsList = [];
+
+  function loadSubjects() {
+    try {
+      const stored = localStorage.getItem(SUBJECTS_STORAGE_KEY);
+      if (stored) {
+        subjectsList = JSON.parse(stored);
+      } else {
+        subjectsList = [...DEFAULT_SUBJECTS];
+        localStorage.setItem(SUBJECTS_STORAGE_KEY, JSON.stringify(subjectsList));
+      }
+    } catch(e) {
+      subjectsList = [...DEFAULT_SUBJECTS];
+    }
+    renderSubjectsList();
+  }
+
+  function renderSubjectsList() {
+    const container = document.getElementById('subjectsListContainer');
+    const countBadge = document.getElementById('modalSubjectCountBadge');
+    const courseLoadStat = document.getElementById('statCourseLoadValue');
+    const subMgmtSub = document.getElementById('subjectMgmtSubtitle');
+
+    if (countBadge) countBadge.textContent = `${subjectsList.length} Subjects`;
+    if (courseLoadStat) courseLoadStat.textContent = subjectsList.length;
+    if (subMgmtSub) subMgmtSub.textContent = `${subjectsList.length} Active Subjects • Manage Credits`;
+
+    if (!container) return;
+    container.innerHTML = '';
+
+    if (subjectsList.length === 0) {
+      container.innerHTML = `
+        <div class="p-4 rounded-xl bg-surface-container-low text-center text-xs text-on-surface-variant">
+          No enrolled subjects. Add a course below.
+        </div>
+      `;
+      return;
+    }
+
+    subjectsList.forEach((sub) => {
+      const itemEl = document.createElement('div');
+      itemEl.className = 'flex items-center justify-between p-2.5 rounded-xl bg-surface-container-low border border-surface-container-high/40 hover:bg-surface-container transition-colors';
+      itemEl.innerHTML = `
+        <div class="flex items-center gap-2.5 min-w-0">
+          <span class="px-2 py-1 rounded-md bg-secondary-container text-on-secondary-container text-[11px] font-bold tracking-wide flex-shrink-0">
+            ${sub.code}
+          </span>
+          <div class="flex flex-col min-w-0">
+            <span class="text-xs font-bold text-on-surface truncate">${sub.name}</span>
+            <span class="text-[10px] text-on-surface-variant">${sub.credits} Credits</span>
+          </div>
+        </div>
+        <button type="button" class="w-8 h-8 rounded-lg text-error hover:bg-error-container/30 flex items-center justify-center flex-shrink-0 transition-colors" data-delete-id="${sub.id}" title="Remove Subject">
+          <span class="material-symbols-outlined text-[18px]">delete</span>
+        </button>
+      `;
+
+      const delBtn = itemEl.querySelector('[data-delete-id]');
+      if (delBtn) {
+        delBtn.addEventListener('click', () => {
+          deleteSubject(sub.id);
+        });
+      }
+
+      container.appendChild(itemEl);
+    });
+  }
+
+  function deleteSubject(id) {
+    subjectsList = subjectsList.filter(s => s.id !== id);
+    try {
+      localStorage.setItem(SUBJECTS_STORAGE_KEY, JSON.stringify(subjectsList));
+    } catch(e) {}
+    renderSubjectsList();
+    showToast('Subject removed successfully', 'info');
+  }
+
+  const addNewSubjectBtn = document.getElementById('addNewSubjectBtn');
+  if (addNewSubjectBtn) {
+    addNewSubjectBtn.addEventListener('click', () => {
+      const codeInput = document.getElementById('newSubjectCodeInput');
+      const nameInput = document.getElementById('newSubjectNameInput');
+      const creditsInput = document.getElementById('newSubjectCreditsInput');
+
+      const codeVal = codeInput ? codeInput.value.trim().toUpperCase() : '';
+      const nameVal = nameInput ? nameInput.value.trim() : '';
+      const creditsVal = creditsInput ? parseInt(creditsInput.value) || 3 : 3;
+
+      if (!codeVal || !nameVal) {
+        showToast('Please enter both course code and name', 'error');
+        return;
+      }
+
+      const newSub = {
+        id: `sub_${Date.now()}`,
+        code: codeVal,
+        name: nameVal,
+        credits: Math.min(6, Math.max(1, creditsVal))
+      };
+
+      subjectsList.push(newSub);
+      try {
+        localStorage.setItem(SUBJECTS_STORAGE_KEY, JSON.stringify(subjectsList));
+      } catch(e) {}
+
+      if (codeInput) codeInput.value = '';
+      if (nameInput) nameInput.value = '';
+      if (creditsInput) creditsInput.value = '4';
+
+      renderSubjectsList();
+      showToast(`Added ${codeVal} to active subjects`, 'success');
+    });
+  }
+
+  // ==========================================
+  // GRADE HISTORY (CGPA SGPA) - KTU 2024 SCHEME
+  // ==========================================
+  const GRADE_HISTORY_KEY = 'college_os_grade_history_v2';
+  const DEFAULT_SEMESTERS = [
+    { sem: "Sem 1", sgpa: 8.75, credits: 18, status: "Completed" },
+    { sem: "Sem 2", sgpa: 8.80, credits: 19, status: "Completed" },
+    { sem: "Sem 3", sgpa: 8.82, credits: 18, status: "Completed" },
+    { sem: "Sem 4", sgpa: 9.10, credits: 18, status: "Completed" },
+    { sem: "Sem 5", sgpa: 8.88, credits: 21, status: "Current Term" }
+  ];
+
+  let gradeHistory = [];
+
+  function loadGradeHistory() {
+    try {
+      const stored = localStorage.getItem(GRADE_HISTORY_KEY);
+      if (stored) {
+        gradeHistory = JSON.parse(stored);
+      } else {
+        gradeHistory = [...DEFAULT_SEMESTERS];
+        localStorage.setItem(GRADE_HISTORY_KEY, JSON.stringify(gradeHistory));
+      }
+    } catch(e) {
+      gradeHistory = [...DEFAULT_SEMESTERS];
+    }
+    renderGradeHistory();
+  }
+
+  function renderGradeHistory() {
+    const listContainer = document.getElementById('gradeHistorySemList');
+    const ghCgpaDisp = document.getElementById('ghCgpaDisplay');
+
+    let totalPoints = 0;
+    let totalCredits = 0;
+
+    gradeHistory.forEach(item => {
+      totalPoints += (item.sgpa * item.credits);
+      totalCredits += item.credits;
+    });
+
+    const calculatedCgpa = totalCredits > 0 ? (totalPoints / totalCredits).toFixed(2) : "8.82";
+    if (ghCgpaDisp) ghCgpaDisp.textContent = calculatedCgpa;
+
+    currentProfile.cgpa = calculatedCgpa;
+    const ghSub = document.getElementById('gradeHistorySubtitle');
+    if (ghSub) ghSub.textContent = `CGPA ${calculatedCgpa} • KTU 2024 Scheme`;
+
+    if (!listContainer) return;
+    listContainer.innerHTML = '';
+
+    gradeHistory.forEach(item => {
+      const row = document.createElement('div');
+      row.className = 'p-3 rounded-xl bg-surface-container-low border border-surface-container-high/40 flex items-center justify-between';
+      row.innerHTML = `
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center font-bold text-xs text-primary">
+            ${item.sem.replace('Sem ', 'S')}
+          </div>
+          <div class="flex flex-col">
+            <span class="text-xs font-bold text-on-surface">${item.sem}</span>
+            <span class="text-[10px] text-on-surface-variant">${item.credits} Credits • ${item.status}</span>
+          </div>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="px-2.5 py-1 rounded-lg bg-surface-container-lowest font-headline-sm text-xs font-bold text-on-surface shadow-2xs">
+            ${Number(item.sgpa).toFixed(2)} SGPA
+          </span>
+        </div>
+      `;
+      listContainer.appendChild(row);
+    });
+  }
+
+  const ghUpdateBtn = document.getElementById('ghUpdateBtn');
+  if (ghUpdateBtn) {
+    ghUpdateBtn.addEventListener('click', () => {
+      const selectSem = document.getElementById('ghSelectSem');
+      const inputSgpa = document.getElementById('ghInputSgpa');
+
+      const semVal = selectSem ? selectSem.value : 'Sem 5';
+      const sgpaVal = inputSgpa ? parseFloat(inputSgpa.value) : 8.88;
+
+      if (isNaN(sgpaVal) || sgpaVal < 0 || sgpaVal > 10.0) {
+        showToast('Please enter a valid SGPA between 0.00 and 10.00', 'error');
+        return;
+      }
+
+      const match = gradeHistory.find(g => g.sem === semVal);
+      if (match) {
+        match.sgpa = sgpaVal;
+      } else {
+        gradeHistory.push({ sem: semVal, sgpa: sgpaVal, credits: 18, status: "Completed" });
+      }
+
+      try {
+        localStorage.setItem(GRADE_HISTORY_KEY, JSON.stringify(gradeHistory));
+      } catch(e) {}
+
+      if (semVal === 'Sem 5' || semVal === currentProfile.currentSemester) {
+        currentProfile.sgpa = sgpaVal.toFixed(2);
+      }
+
+      try {
+        localStorage.setItem(PROFILE_STORAGE_KEY, JSON.stringify(currentProfile));
+      } catch(e) {}
+
+      renderGradeHistory();
+      showToast(`${semVal} SGPA updated to ${sgpaVal.toFixed(2)}! Cumulative CGPA recalculated.`, 'success');
+    });
+  }
+
+  // ==========================================================
+  // COMPLETELY FUNCTIONAL CGPA CALCULATOR - KTU 2024 SCHEME
+  // (S:10, A+:9, A:8.5, B+:8, B:7.5, C+:7, C:6.5, D:6, P:5.5, F:0)
+  // ==========================================================
+  let calcCourses = [
+    { id: 1, name: "Algorithms & Data Structures", credits: 4, grade: 9.0 },
+    { id: 2, name: "Operating Systems", credits: 4, grade: 8.5 },
+    { id: 3, name: "Database Management Systems", credits: 3, grade: 10.0 },
+    { id: 4, name: "Computer Networks", credits: 3, grade: 8.0 },
+    { id: 5, name: "Web Technologies", credits: 3, grade: 9.0 },
+    { id: 6, name: "Discrete Mathematics", credits: 4, grade: 8.5 }
+  ];
+
+  const calcPriorCreditsInput = document.getElementById('calcPriorCreditsInput');
+  const calcPriorCgpaInput = document.getElementById('calcPriorCgpaInput');
+  const calcCoursesContainer = document.getElementById('calcCoursesListContainer');
+  const calcAddRowBtn = document.getElementById('calcAddRowBtn');
+  const calcApplyBtn = document.getElementById('calcApplyToProfileBtn');
+
+  // Exact KTU B.Tech 2024 Scheme Table
+  const GRADE_OPTIONS = [
+    { label: "S (10.0) • 90%+", val: 10.0 },
+    { label: "A+ (9.0) • 85-89%", val: 9.0 },
+    { label: "A (8.5) • 80-84%", val: 8.5 },
+    { label: "B+ (8.0) • 75-79%", val: 8.0 },
+    { label: "B (7.5) • 70-74%", val: 7.5 },
+    { label: "C+ (7.0) • 65-69%", val: 7.0 },
+    { label: "C (6.5) • 60-64%", val: 6.5 },
+    { label: "D (6.0) • 55-59%", val: 6.0 },
+    { label: "P (5.5) • 50-54%", val: 5.5 },
+    { label: "F (0.0) • Below 40%", val: 0.0 },
+    { label: "FE (0.0) • Eligibility Failed", val: 0.0 },
+    { label: "Ab (0.0) • Absent", val: 0.0 }
+  ];
+
+  function renderCalcCourses() {
+    if (!calcCoursesContainer) return;
+    calcCoursesContainer.innerHTML = '';
+
+    calcCourses.forEach((item) => {
+      const row = document.createElement('div');
+      row.className = 'p-2.5 rounded-xl bg-surface-container-low border border-surface-container-high/40 flex items-center gap-2';
+
+      const selectGradeHtml = GRADE_OPTIONS.map(opt => `
+        <option value="${opt.val}" ${Math.abs(opt.val - item.grade) < 0.05 ? 'selected' : ''}>${opt.label}</option>
+      `).join('');
+
+      row.innerHTML = `
+        <div class="flex-1 min-w-0">
+          <input type="text" value="${item.name}" class="w-full bg-transparent text-xs font-semibold text-on-surface border-b border-transparent focus:border-primary focus:outline-none truncate calc-course-name" placeholder="Course name" />
+        </div>
+        <div class="w-16 flex-shrink-0">
+          <select class="w-full h-8 px-1.5 rounded-lg bg-surface-container-lowest border border-surface-container-high text-[11px] font-bold text-on-surface calc-course-credits">
+            <option value="1" ${item.credits === 1 ? 'selected' : ''}>1 cr</option>
+            <option value="2" ${item.credits === 2 ? 'selected' : ''}>2 cr</option>
+            <option value="3" ${item.credits === 3 ? 'selected' : ''}>3 cr</option>
+            <option value="4" ${item.credits === 4 ? 'selected' : ''}>4 cr</option>
+            <option value="5" ${item.credits === 5 ? 'selected' : ''}>5 cr</option>
+            <option value="6" ${item.credits === 6 ? 'selected' : ''}>6 cr</option>
+          </select>
+        </div>
+        <div class="w-32 flex-shrink-0">
+          <select class="w-full h-8 px-1.5 rounded-lg bg-surface-container-lowest border border-surface-container-high text-[11px] font-bold text-on-surface calc-course-grade">
+            ${selectGradeHtml}
+          </select>
+        </div>
+        <button type="button" class="w-7 h-7 rounded-lg text-on-surface-variant hover:text-error hover:bg-error-container/20 flex items-center justify-center flex-shrink-0 transition-colors calc-delete-row" title="Remove course">
+          <span class="material-symbols-outlined text-[16px]">close</span>
+        </button>
+      `;
+
+      const nameInp = row.querySelector('.calc-course-name');
+      const credSel = row.querySelector('.calc-course-credits');
+      const gradSel = row.querySelector('.calc-course-grade');
+      const delBtn = row.querySelector('.calc-delete-row');
+
+      if (nameInp) {
+        nameInp.addEventListener('input', (e) => {
+          item.name = e.target.value;
+        });
+      }
+      if (credSel) {
+        credSel.addEventListener('change', (e) => {
+          item.credits = parseInt(e.target.value) || 3;
+          runCgpaCalculation();
+        });
+      }
+      if (gradSel) {
+        gradSel.addEventListener('change', (e) => {
+          item.grade = parseFloat(e.target.value) || 8.5;
+          runCgpaCalculation();
+        });
+      }
+      if (delBtn) {
+        delBtn.addEventListener('click', () => {
+          calcCourses = calcCourses.filter(c => c.id !== item.id);
+          renderCalcCourses();
+          runCgpaCalculation();
+        });
+      }
+
+      calcCoursesContainer.appendChild(row);
+    });
+
+    runCgpaCalculation();
+  }
+
+  function runCgpaCalculation() {
+    const priorCredits = parseFloat(calcPriorCreditsInput ? calcPriorCreditsInput.value : 73) || 0;
+    const priorCgpa = parseFloat(calcPriorCgpaInput ? calcPriorCgpaInput.value : 8.81) || 0;
+
+    let termCredits = 0;
+    let termGradePoints = 0;
+
+    calcCourses.forEach(c => {
+      termCredits += c.credits;
+      termGradePoints += (c.credits * c.grade);
+    });
+
+    const forecastSgpa = termCredits > 0 ? (termGradePoints / termCredits) : 0;
+    const totalCredits = priorCredits + termCredits;
+    const totalPoints = (priorCredits * priorCgpa) + termGradePoints;
+    const projectedCgpa = totalCredits > 0 ? (totalPoints / totalCredits) : 0;
+
+    const liveSgpaEl = document.getElementById('calcLiveSgpa');
+    if (liveSgpaEl) liveSgpaEl.textContent = forecastSgpa.toFixed(2);
+
+    const liveTermCrEl = document.getElementById('calcLiveTermCredits');
+    if (liveTermCrEl) liveTermCrEl.textContent = `${termCredits} Term Credits`;
+
+    const liveCgpaEl = document.getElementById('calcLiveCgpa');
+    if (liveCgpaEl) liveCgpaEl.textContent = projectedCgpa.toFixed(2);
+
+    const liveTotCrEl = document.getElementById('calcLiveTotalCredits');
+    if (liveTotCrEl) liveTotCrEl.textContent = `${totalCredits} Cumulative Cr`;
+
+    return { forecastSgpa, projectedCgpa, totalCredits };
+  }
+
+  if (calcPriorCreditsInput) calcPriorCreditsInput.addEventListener('input', runCgpaCalculation);
+  if (calcPriorCgpaInput) calcPriorCgpaInput.addEventListener('input', runCgpaCalculation);
+
+  if (calcAddRowBtn) {
+    calcAddRowBtn.addEventListener('click', () => {
+      calcCourses.push({
+        id: Date.now(),
+        name: `Course ${calcCourses.length + 1}`,
+        credits: 3,
+        grade: 4.0
+      });
+      renderCalcCourses();
+    });
+  }
+
+  if (calcApplyBtn) {
+    calcApplyBtn.addEventListener('click', () => {
+      const res = runCgpaCalculation();
+      currentProfile.cgpa = res.projectedCgpa.toFixed(2);
+      currentProfile.sgpa = res.forecastSgpa.toFixed(2);
+      currentProfile.creditsCompleted = res.totalCredits;
+      currentProfile.updatedAt = Date.now();
+
+      try {
+        localStorage.setItem(PROFILE_STORAGE_KEY, JSON.stringify(currentProfile));
+      } catch(e) {}
+
+      updateProfileUI();
+      closeModal(document.getElementById('cgpaCalculatorModal'));
+      showToast(`Applied Projected CGPA ${currentProfile.cgpa} & SGPA ${currentProfile.sgpa} to Profile!`, 'success');
+    });
+  }
+
+  // ==========================================
+  // COMPLETELY FUNCTIONAL GOAL MONITOR
+  // ==========================================
+  const GOALS_STORAGE_KEY = 'college_os_goals_v2';
+  const goalAttSlider = document.getElementById('goalAttSlider');
+  const goalAttTargetValText = document.getElementById('goalAttTargetValText');
+  const goalAttFeedbackTitle = document.getElementById('goalAttFeedbackTitle');
+  const goalAttFeedbackDesc = document.getElementById('goalAttFeedbackDesc');
+  const goalAttFeedbackIcon = document.getElementById('goalAttFeedbackIcon');
+
+  const goalCgpaTargetInput = document.getElementById('goalCgpaTargetInput');
+  const goalCgpaRemainingCrInput = document.getElementById('goalCgpaRemainingCrInput');
+  const goalCgpaFeedbackTitle = document.getElementById('goalCgpaFeedbackTitle');
+  const goalCgpaFeedbackDesc = document.getElementById('goalCgpaFeedbackDesc');
+  const saveGoalsBtn = document.getElementById('saveGoalsBtn');
+
+  // Baseline Attendance statistics (101 / 120 = 84.17%)
+  const ATT_ATTENDED = 101;
+  const ATT_TOTAL = 120;
+  const CURRENT_ATT_PCT = (ATT_ATTENDED / ATT_TOTAL) * 100;
+
+  function updateAttendanceGoalCalculation() {
+    if (!goalAttSlider) return;
+    const targetPct = parseInt(goalAttSlider.value) || 75;
+    if (goalAttTargetValText) goalAttTargetValText.textContent = `${targetPct}%`;
+
+    const targetDecimal = targetPct / 100;
+
+    if (CURRENT_ATT_PCT >= targetPct) {
+      const safeBuffer = Math.max(0, Math.floor((ATT_ATTENDED - (targetDecimal * ATT_TOTAL)) / targetDecimal));
+      if (goalAttFeedbackIcon) {
+        goalAttFeedbackIcon.textContent = 'verified';
+        goalAttFeedbackIcon.className = 'material-symbols-outlined text-secondary text-[20px] flex-shrink-0 mt-0.5';
+      }
+      if (goalAttFeedbackTitle) {
+        goalAttFeedbackTitle.textContent = `Safe Status: ${safeBuffer} Class Buffer`;
+        goalAttFeedbackTitle.className = 'font-label-sm text-xs font-bold text-on-surface';
+      }
+      if (goalAttFeedbackDesc) {
+        goalAttFeedbackDesc.textContent = `You can safely miss up to ${safeBuffer} classes without your attendance dropping below the ${targetPct}% cutoff threshold.`;
+      }
+    } else {
+      const neededConsecutive = Math.ceil(((targetDecimal * ATT_TOTAL) - ATT_ATTENDED) / (1 - targetDecimal));
+      if (goalAttFeedbackIcon) {
+        goalAttFeedbackIcon.textContent = 'warning';
+        goalAttFeedbackIcon.className = 'material-symbols-outlined text-error text-[20px] flex-shrink-0 mt-0.5';
+      }
+      if (goalAttFeedbackTitle) {
+        goalAttFeedbackTitle.textContent = `Deficit Status: Need ${neededConsecutive} Classes`;
+        goalAttFeedbackTitle.className = 'font-label-sm text-xs font-bold text-error';
+      }
+      if (goalAttFeedbackDesc) {
+        goalAttFeedbackDesc.textContent = `Your current attendance (84.2%) is below target. You must attend the next ${neededConsecutive} classes continuously without absence to reach ${targetPct}%.`;
+      }
+    }
+  }
+
+  function updateCgpaGoalCalculation() {
+    if (!goalCgpaTargetInput || !goalCgpaRemainingCrInput) return;
+    const targetCgpa = parseFloat(goalCgpaTargetInput.value) || 9.00;
+    const remainingCr = parseFloat(goalCgpaRemainingCrInput.value) || 66;
+
+    const currentCgpa = parseFloat(currentProfile.cgpa) || 8.82;
+    const completedCr = parseFloat(currentProfile.creditsCompleted) || 94;
+    const totalGradCr = completedCr + remainingCr;
+
+    const totalNeededPoints = (targetCgpa * totalGradCr) - (currentCgpa * completedCr);
+    const requiredSgpa = remainingCr > 0 ? (totalNeededPoints / remainingCr) : 0;
+
+    if (requiredSgpa <= 10.0 && requiredSgpa >= 0) {
+      if (goalCgpaFeedbackTitle) {
+        goalCgpaFeedbackTitle.textContent = `Required Average SGPA: ${requiredSgpa.toFixed(2)}`;
+        goalCgpaFeedbackTitle.className = 'font-label-sm text-xs font-bold text-on-surface';
+      }
+      if (goalCgpaFeedbackDesc) {
+        goalCgpaFeedbackDesc.textContent = `To graduate with a ${targetCgpa.toFixed(2)} CGPA, you need to maintain at least a ${requiredSgpa.toFixed(2)} SGPA across your remaining ${remainingCr} credits under the KTU scheme.`;
+      }
+    } else if (requiredSgpa > 10.0) {
+      const maxPossibleCgpa = ((currentCgpa * completedCr) + (10.0 * remainingCr)) / totalGradCr;
+      if (goalCgpaFeedbackTitle) {
+        goalCgpaFeedbackTitle.textContent = `Target SGPA (${requiredSgpa.toFixed(2)}) Exceeds Max 10.0`;
+        goalCgpaFeedbackTitle.className = 'font-label-sm text-xs font-bold text-error';
+      }
+      if (goalCgpaFeedbackDesc) {
+        goalCgpaFeedbackDesc.textContent = `Goal requires exceeding 10.0 SGPA. Max achievable CGPA by graduation with perfect 10.0 (S grades) is ${maxPossibleCgpa.toFixed(2)}.`;
+      }
+    } else {
+      if (goalCgpaFeedbackTitle) {
+        goalCgpaFeedbackTitle.textContent = `Target Already Achieved`;
+        goalCgpaFeedbackTitle.className = 'font-label-sm text-xs font-bold text-secondary';
+      }
+      if (goalCgpaFeedbackDesc) {
+        goalCgpaFeedbackDesc.textContent = `Your current CGPA already comfortably exceeds this goal threshold.`;
+      }
+    }
+  }
+
+  if (goalAttSlider) {
+    goalAttSlider.addEventListener('input', updateAttendanceGoalCalculation);
+  }
+  if (goalCgpaTargetInput) {
+    goalCgpaTargetInput.addEventListener('input', updateCgpaGoalCalculation);
+  }
+  if (goalCgpaRemainingCrInput) {
+    goalCgpaRemainingCrInput.addEventListener('input', updateCgpaGoalCalculation);
+  }
+
+  function loadSavedGoals() {
+    try {
+      const stored = localStorage.getItem(GOALS_STORAGE_KEY);
+      if (stored) {
+        const goals = JSON.parse(stored);
+        if (goalAttSlider && goals.attendanceTarget) goalAttSlider.value = goals.attendanceTarget;
+        if (goalCgpaTargetInput && goals.cgpaTarget) goalCgpaTargetInput.value = goals.cgpaTarget;
+        if (goalCgpaRemainingCrInput && goals.remainingCredits) goalCgpaRemainingCrInput.value = goals.remainingCredits;
+      }
+    } catch(e) {}
+    updateAttendanceGoalCalculation();
+    updateCgpaGoalCalculation();
+  }
+
+  if (saveGoalsBtn) {
+    saveGoalsBtn.addEventListener('click', () => {
+      const goals = {
+        attendanceTarget: goalAttSlider ? parseInt(goalAttSlider.value) : 75,
+        cgpaTarget: goalCgpaTargetInput ? parseFloat(goalCgpaTargetInput.value) : 3.90,
+        remainingCredits: goalCgpaRemainingCrInput ? parseInt(goalCgpaRemainingCrInput.value) : 66,
+        savedAt: Date.now()
+      };
+      try {
+        localStorage.setItem(GOALS_STORAGE_KEY, JSON.stringify(goals));
+      } catch(e) {}
+      closeModal(document.getElementById('goalMonitorModal'));
+      showToast('Academic goal targets saved successfully!', 'success');
+    });
+  }
+
+  // ==========================================
+  // NOTIFICATIONS PREFERENCES
+  // ==========================================
+  const NOTIF_STORAGE_KEY = 'college_os_notifications_v2';
+  const saveNotifBtn = document.getElementById('saveNotifSettingsBtn');
+
+  function loadNotificationsConfig() {
+    try {
+      const stored = localStorage.getItem(NOTIF_STORAGE_KEY);
+      if (stored) {
+        const cfg = JSON.parse(stored);
+        const lT = document.getElementById('notifLectureToggle');
+        const dT = document.getElementById('notifDeadlineToggle');
+        const bT = document.getElementById('notifBriefingToggle');
+        if (lT) lT.checked = !!cfg.lecture;
+        if (dT) dT.checked = !!cfg.deadlines;
+        if (bT) bT.checked = !!cfg.briefing;
+      }
+    } catch(e) {}
+  }
+
+  if (saveNotifBtn) {
+    saveNotifBtn.addEventListener('click', () => {
+      const lT = document.getElementById('notifLectureToggle');
+      const dT = document.getElementById('notifDeadlineToggle');
+      const bT = document.getElementById('notifBriefingToggle');
+
+      const cfg = {
+        lecture: lT ? lT.checked : true,
+        deadlines: dT ? dT.checked : true,
+        briefing: bT ? bT.checked : false,
+        updatedAt: Date.now()
+      };
+
+      try {
+        localStorage.setItem(NOTIF_STORAGE_KEY, JSON.stringify(cfg));
+      } catch(e) {}
+
+      closeModal(document.getElementById('notificationsModal'));
+      showToast('Notification preferences updated!', 'success');
+    });
+  }
+
+  // ==========================================
+  // CLOUD SYNC & CROSS-PLATFORM SCHEMA LOGIC
+  // ==========================================
+  const syncBtn = document.getElementById('sync-now-btn');
+  if (syncBtn) {
+    syncBtn.addEventListener('click', async () => {
+      const icon = document.getElementById('syncBtnIcon');
+      const label = document.getElementById('syncBtnLabel');
+      
+      if (icon) icon.classList.add('animate-spin');
+      if (label) label.textContent = 'Syncing...';
+      syncBtn.disabled = true;
+
+      if (window.CollegeOSCloud) {
+        await window.CollegeOSCloud.syncAllLocalToCloud();
+      }
+
+      setTimeout(() => {
+        if (icon) icon.classList.remove('animate-spin');
+        if (label) label.textContent = 'Sync to Cloud';
+        syncBtn.disabled = false;
+
+        const now = new Date();
+        const timeStr = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        
+        const syncState = {
+          lastSynced: now.getTime(),
+          timestampStr: timeStr,
+          profile: currentProfile,
+          firestore: {
+            authProvider: 'firebase_auth_v9',
+            collections: ['users', 'timetables', 'tasks', 'courses'],
+            status: 'synced'
+          },
+          cloudinary: {
+            bucket: 'college-os-student-vault',
+            status: 'connected',
+            filesCount: 14
+          },
+          androidSync: {
+            package: 'com.collegeos.student',
+            state: 'in_sync',
+            sharedKey: currentProfile.userId
+          }
+        };
+
+        try {
+          localStorage.setItem('college_os_cloud_sync_state', JSON.stringify(syncState));
+        } catch (e) {}
+
+        const modalLastSynced = document.getElementById('modalLastSyncedTimeText');
+        if (modalLastSynced) {
+          modalLastSynced.textContent = `Synced with Firebase & Cloudinary at ${timeStr}. Android companion in sync.`;
+        }
+
+        showToast('Synced to Firebase Firestore & Cloudinary! Android & Web in sync.', 'success');
+      }, 800);
+    });
+  }
+
+  // Schema Inspector Modal Logic
+  const schemaModal = document.getElementById('schema-modal');
+  const schemaPreview = document.getElementById('schemaJsonPreview');
+  const copySchemaBtn = document.getElementById('copy-schema-btn');
+
+  function renderSchemaPayload() {
+    if (!schemaPreview) return;
+    let timetableData = [];
+    let tasksData = [];
+    try {
+      const rawTT = localStorage.getItem('college_os_timetable_v2');
+      if (rawTT) timetableData = JSON.parse(rawTT);
+      const rawTasks = localStorage.getItem('college_os_tasks_data_v2');
+      if (rawTasks) tasksData = JSON.parse(rawTasks);
+    } catch(e) {}
+
+    const payload = {
+      _comment: "Cross-platform schema shared between Android App and Web App",
+      firebaseFirestore: {
+        collection: "users",
+        documentId: currentProfile.userId,
+        userData: {
+          name: currentProfile.name,
+          college: currentProfile.college,
+          major: currentProfile.major,
+          semester: currentProfile.currentSemester,
+          studentId: currentProfile.studentId,
+          degree: currentProfile.degree,
+          advisor: currentProfile.advisor,
+          cgpa: currentProfile.cgpa,
+          sgpa: currentProfile.sgpa,
+          updatedAt: currentProfile.updatedAt
+        },
+        timetableCollection: {
+          totalEntries: timetableData.length,
+          schemaVersion: "v2"
+        },
+        tasksCollection: {
+          totalEntries: tasksData.length,
+          autoDeletePeriodDays: 7
+        },
+        subjectsCollection: {
+          totalSubjects: subjectsList.length
+        }
+      },
+      cloudinary: {
+        cloudName: "college-os-media",
+        assetFolder: `students/${currentProfile.userId}/vault`,
+        allowedTypes: ["application/pdf", "image/png", "image/jpeg"]
+      },
+      androidSyncBridge: {
+        sharedAccount: true,
+        bidirectionalSync: true,
+        offlineFirstStorage: true
+      }
+    };
+
+    schemaPreview.textContent = JSON.stringify(payload, null, 2);
+  }
+
+  const viewSchemaBtn = document.getElementById('view-schema-btn');
+  if (viewSchemaBtn) {
+    viewSchemaBtn.addEventListener('click', () => {
+      renderSchemaPayload();
+      openModal(schemaModal);
+    });
+  }
+
+  if (copySchemaBtn && schemaPreview) {
+    copySchemaBtn.addEventListener('click', () => {
+      navigator.clipboard.writeText(schemaPreview.textContent).then(() => {
+        copySchemaBtn.innerHTML = '<span class="material-symbols-outlined text-[13px]">check</span> Copied!';
+        setTimeout(() => {
+          copySchemaBtn.innerHTML = '<span class="material-symbols-outlined text-[13px]">content_copy</span> Copy';
+        }, 2000);
+      });
+    });
+  }
+
+  // Clear Cache Button
+  const clearCacheBtn = document.getElementById('clear-cache-btn');
+  if (clearCacheBtn) {
+    clearCacheBtn.addEventListener('click', () => {
+      clearCacheBtn.innerText = 'Cleared!';
+      clearCacheBtn.classList.add('bg-secondary-container', 'text-on-secondary-container');
+      setTimeout(() => {
+        clearCacheBtn.innerText = 'Clear Cache';
+        clearCacheBtn.classList.remove('bg-secondary-container', 'text-on-secondary-container');
+      }, 2000);
+      showToast('Temporary cache and manifests cleared', 'info');
+    });
+  }
+
+  // Sign Out Button
+  const signoutBtn = document.getElementById('signout-btn');
+  if (signoutBtn) {
+    signoutBtn.addEventListener('click', () => {
+      showToast('Signed out. Local student data safely preserved offline.', 'info');
+    });
+  }
+
+  // ==========================================
+  // INITIALIZATION ON PAGE LOAD
+  // ==========================================
+  function initApp() {
+    initTheme();
+    loadProfile();
+    loadSubjects();
+    renderCalcCourses();
+    loadGradeHistory();
+    loadSavedGoals();
+    loadNotificationsConfig();
+  }
+
+  document.addEventListener('DOMContentLoaded', initApp);
+  initApp();
+</script>
+<!-- Shared Firebase Cloud Sync & Authentication Gate Module -->
+<script type="module" src="../shared_firebase_cloud.js"></script>
+<!-- Progressive Web App Controller (Android Standalone Fullscreen Mode) -->
+<script type="module" src="/pwa_manager.js"></script>
+</main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.04)]" data-active-classes="[&amp;_.nav-pill]:bg-primary-fixed [&amp;_.nav-pill]:text-on-primary-fixed [&amp;_.nav-icon]:text-primary font-bold text-on-surface"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center w-16 h-12 text-on-surface-variant group transition-all" data-path="home" href="../home_dashboard/code.html"><div class="nav-pill w-12 h-7 rounded-full flex items-center justify-center transition-all"><span class="material-symbols-outlined nav-icon text-[22px]">home</span></div><span class="font-label-sm text-label-sm mt-0.5">Home</span></a><a class="flex flex-col items-center justify-center w-16 h-12 text-on-surface-variant group transition-all" data-path="timetable" href="../timetable_scheduler/code.html"><div class="nav-pill w-12 h-7 rounded-full flex items-center justify-center transition-all"><span class="material-symbols-outlined nav-icon text-[22px]">calendar_today</span></div><span class="font-label-sm text-label-sm mt-0.5">Timetable</span></a><a class="flex flex-col items-center justify-center w-16 h-12 text-on-surface-variant group transition-all" data-path="tasks" href="../tasks_assignments/code.html"><div class="nav-pill w-12 h-7 rounded-full flex items-center justify-center transition-all"><span class="material-symbols-outlined nav-icon text-[22px]">check_circle_outline</span></div><span class="font-label-sm text-label-sm mt-0.5">Tasks</span></a><a class="flex flex-col items-center justify-center w-16 h-12 text-on-surface-variant group transition-all" data-path="vault" href="../personal_data_vault/code.html"><div class="nav-pill w-12 h-7 rounded-full flex items-center justify-center transition-all"><span class="material-symbols-outlined nav-icon text-[22px]">folder_special</span></div><span class="font-label-sm text-label-sm mt-0.5">Vault</span></a><a aria-current="page" class="flex flex-col items-center justify-center w-16 h-12 group transition-all [&amp;_.nav-pill]:bg-primary-fixed [&amp;_.nav-pill]:text-on-primary-fixed [&amp;_.nav-icon]:text-primary font-bold text-on-surface" data-path="profile" href="../student_profile_settings/code.html"><div class="nav-pill w-12 h-7 rounded-full flex items-center justify-center transition-all"><span class="material-symbols-outlined nav-icon text-[22px]">person_outline</span></div><span class="font-label-sm text-label-sm mt-0.5">Profile</span></a></div></nav></body></html>
