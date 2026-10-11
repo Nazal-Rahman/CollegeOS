@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-low": "#f1f3ff", "inverse-primary": "#b4c4ff", "on-tertiary-fixed": "#260059", "primary": "#1451d1", "on-error-container": "#93000a", "error": "#ba1a1a", "on-secondary": "#ffffff", "primary-container": "#3b6ceb", "surface-container-highest": "#dbe2f9", "tertiary-fixed": "#ebddff", "surface-bright": "#f9f9ff", "tertiary-fixed-dim": "#d3bbff", "inverse-surface": "#293041", "background": "#f9f9ff", "on-surface-variant": "#434654", "secondary-container": "#77fac7", "surface-container-lowest": "#ffffff", "inverse-on-surface": "#edf0ff", "primary-fixed-dim": "#b4c4ff", "surface-tint": "#1954d4", "on-tertiary": "#ffffff", "surface-dim": "#d2daf0", "tertiary-container": "#865cd5", "primary-fixed": "#dbe1ff", "tertiary": "#6d42ba", "on-secondary-container": "#007353", "surface-variant": "#dbe2f9", "on-tertiary-fixed-variant": "#5729a3", "on-primary-fixed": "#00174c", "on-secondary-fixed-variant": "#00513a", "on-primary": "#ffffff", "on-background": "#141b2c", "on-secondary-fixed": "#002115", "outline-variant": "#c3c6d7", "secondary-fixed-dim": "#58ddac", "on-primary-container": "#fefcff", "surface-container": "#e9edff", "on-primary-fixed-variant": "#003daa", "on-error": "#ffffff", "secondary-fixed": "#77fac7", "outline": "#737686", "on-surface": "#141b2c", "error-container": "#ffdad6", "surface": "#f9f9ff", "secondary": "#006c4e", "surface-container-high": "#e0e8ff", "on-tertiary-container": "#fffbff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin": "1rem", "space-sm": "0.5rem", "space-md": "1rem", "space-xl": "2rem", "space-xs": "0.25rem", "space-lg": "1.25rem", "gutter": "1rem" }, "fontFamily": { "label-md": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "body-lg": ["Inter"], "label-sm": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-md": ["Inter"], "label-lg": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "body-sm": ["Inter"], "headline-xl": ["Plus Jakarta Sans"] }, "fontSize": { "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "500" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }], "headline-lg": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0", "fontWeight": "400" }], "label-lg": ["14px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "0", "fontWeight": "600" }], "body-sm": ["13px", { "lineHeight": "18px", "letterSpacing": "0", "fontWeight": "400" }], "headline-xl": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="College OS Logo" class="h-8 w-auto object-contain flex-shrink-0" src="/logo.png"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-on-surface truncate">College OS</span></div></div></div><div class="flex items-center gap-space-xs flex-shrink-0"><div class="flex items-center justify-center pl-space-xs"><a href="profile.html" title="Go to Profile" class="block transition-transform hover:scale-105 active:scale-95"><div class="w-8 h-8 rounded-full bg-surface-container-high border border-surface-container-highest flex items-center justify-center text-on-surface-variant ring-2 ring-primary/20"><span class="material-symbols-outlined text-[18px]">person</span></div></a></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full pb-20">
+<!-- Top Momentum & Summary Banner -->
+<div class="px-margin pt-space-sm pb-space-xs flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface">Academic Sprint</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1.5 mt-0.5" id="sprintMomentumText">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+        4 of 7 completed this week • 73% momentum
+      </span>
+</div>
+</div>
+<!-- Category Filter Rail (Tabs with Count Badges) -->
+<div class="mt-space-sm px-margin">
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-1" id="categoryRail">
+<button class="cat-pill active flex items-center gap-2 px-3.5 py-2 rounded-xl bg-primary text-on-primary font-label-md text-label-md shadow-sm transition-all flex-shrink-0" data-filter="all">
+<span>All</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container-lowest/25 text-on-primary font-label-sm text-label-sm" id="countBadgeAll">5</span>
+</button>
+<button class="cat-pill flex items-center gap-2 px-3.5 py-2 rounded-xl bg-surface-container text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-high transition-all flex-shrink-0" data-filter="assignment">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span>Assignments</span>
+<span class="px-1.5 py-0.2 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm" id="countBadgeAssignment">2</span>
+</button>
+<button class="cat-pill flex items-center gap-2 px-3.5 py-2 rounded-xl bg-surface-container text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-high transition-all flex-shrink-0" data-filter="homework">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>Homework</span>
+<span class="px-1.5 py-0.2 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm" id="countBadgeHomework">2</span>
+</button>
+<button class="cat-pill flex items-center gap-2 px-3.5 py-2 rounded-xl bg-surface-container text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-high transition-all flex-shrink-0" data-filter="lab">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span>Lab Work</span>
+<span class="px-1.5 py-0.2 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm" id="countBadgeLab">1</span>
+</button>
+</div>
+</div>
+<!-- Search & Filter Options Bar -->
+<div class="mt-space-sm px-margin flex flex-col gap-2">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-[20px] text-outline">search</span>
+<input class="w-full h-11 pl-10 pr-10 rounded-xl bg-surface-container-lowest shadow-sm text-on-surface placeholder:text-outline font-body-md text-body-md focus:outline-none focus:bg-surface-container-lowest transition-all" id="taskSearchInput" placeholder="Search tasks, subjects, labs..." type="text"/>
+<button class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-outline hover:text-on-surface" id="clearSearchBtn">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+</button>
+</div>
+<!-- Micro Filter Badges -->
+<div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-0.5">
+<button class="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-surface-container text-on-surface-variant font-label-sm text-label-sm shadow-xs flex-shrink-0">
+<span>Due Date</span>
+<span class="material-symbols-outlined text-[14px]">arrow_drop_down</span>
+</button>
+<button class="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-error-container text-on-error-container font-label-sm text-label-sm shadow-xs flex-shrink-0">
+<span class="material-symbols-outlined text-[14px] text-error">flag</span>
+<span>Priority: High</span>
+</button>
+<button class="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-surface-container-high text-on-surface font-label-sm text-label-sm shadow-xs flex-shrink-0">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span>Incomplete</span>
+</button>
+<button class="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-surface-container text-on-surface-variant font-label-sm text-label-sm shadow-xs flex-shrink-0">
+<span class="material-symbols-outlined text-[14px]">attachment</span>
+<span>Has Files</span>
+</button>
+</div>
+</div>
+<!-- Overdue Alert Card (Tactile Warm Attention Card) -->
+<div class="mt-space-md px-margin" id="overdueAlertCard">
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest p-space-md shadow-md border border-error-container/60">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-error"></div>
+<div class="flex items-start justify-between gap-3 pl-1">
+<div class="flex items-start gap-3">
+<div class="w-9 h-9 rounded-xl bg-error-container flex items-center justify-center text-error flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">warning</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-error uppercase tracking-wider font-bold">Overdue • 1 Day Ago</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate mt-0.5 font-bold" id="overdueTaskTitle">Machine Learning Problem Set 2</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-1" id="overdueTaskDesc">Support Vector Machines &amp; Kernel Tricks • CS-515</p>
+</div>
+</div>
+</div>
+<div class="mt-3 pl-1 pt-2 flex items-center justify-between bg-surface-container-low rounded-lg p-2 flex-wrap gap-2">
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-error">event_busy</span>
+<span class="font-label-sm text-label-sm font-medium">Missed: Yesterday, 11:59 PM</span>
+</div>
+<div class="flex items-center gap-2">
+<button type="button" onclick="handleDismissOverdue()" id="dismissOverdueBtn" class="px-3.5 py-1.5 rounded-lg bg-surface-container-highest text-on-surface hover:bg-surface-container-high font-label-sm text-label-sm font-semibold active:scale-95 transition-all flex items-center gap-1 cursor-pointer">
+  <span class="material-symbols-outlined text-[14px]">close</span>
+  <span>Dismiss</span>
+</button>
+<button type="button" onclick="openRescheduleModal()" id="rescheduleOverdueBtn" class="px-3.5 py-1.5 rounded-lg bg-error text-on-error font-label-sm text-label-sm font-bold shadow-sm active:scale-95 transition-all flex items-center gap-1 hover:opacity-90 cursor-pointer">
+  <span class="material-symbols-outlined text-[14px]">edit_calendar</span>
+  <span>Reschedule</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Dynamic Tasks Container (Pending Tasks) -->
+<div class="mt-space-lg px-margin flex flex-col gap-space-lg" id="taskListContainer">
+  <!-- Rendered dynamically by JavaScript -->
+</div>
+
+<!-- COMPLETED TASKS COLLAPSIBLE ACCORDION -->
+<div class="mt-space-lg px-margin">
+  <div class="flex flex-col rounded-2xl bg-surface-container-low overflow-hidden border border-surface-container-high/60">
+    <button class="w-full px-4 py-3.5 flex items-center justify-between text-left hover:bg-surface-container transition-colors" id="toggleCompletedBtn">
+      <div class="flex items-center gap-2">
+        <span class="w-6 h-6 rounded-lg bg-secondary text-on-secondary flex items-center justify-center">
+          <span class="material-symbols-outlined text-[15px]">done_all</span>
+        </span>
+        <span class="font-headline-sm text-headline-sm text-on-surface font-bold">Completed Tasks</span>
+        <span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm" id="completedCountBadge">0 Completed</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="text-xs text-on-surface-variant/70 hidden sm:inline flex items-center gap-1">
+          <span class="material-symbols-outlined text-[14px] text-secondary">auto_delete</span>
+          <span>Auto-cleans in 7 days</span>
+        </span>
+        <span class="material-symbols-outlined text-[20px] text-outline transition-transform duration-200" id="accordionChevron">expand_more</span>
+      </div>
+    </button>
+    <div class="hidden px-4 pb-4 flex flex-col gap-2.5 pt-1.5" id="completedTasksList">
+      <!-- Rendered dynamically by JavaScript -->
+    </div>
+  </div>
+</div>
+<!-- FLOATING ACTION BUTTON (New Task Trigger + Scheduling Indicator) -->
+<div class="fixed right-margin bottom-20 z-40 flex flex-col items-end gap-2 pointer-events-none">
+<!-- Micro Reminder pill badge -->
+<div class="pointer-events-auto flex items-center gap-1.5 px-3 py-1 rounded-full bg-inverse-surface text-inverse-on-surface shadow-md font-label-sm text-label-sm animate-bounce">
+<span class="material-symbols-outlined text-[14px] text-secondary-fixed">alarm_on</span>
+<span>Auto-remind 2h before</span>
+</div>
+<!-- Main Add FAB -->
+<button class="pointer-events-auto h-14 pl-4 pr-5 rounded-full bg-primary text-on-primary shadow-xl hover:bg-primary-container active:scale-95 transition-all flex items-center gap-2 group" id="addNewTaskBtn">
+<div class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-on-primary group-hover:rotate-90 transition-transform">
+<span class="material-symbols-outlined text-[22px]">add</span>
+</div>
+<span class="font-label-lg text-label-lg tracking-wide font-semibold">New Task</span>
+</button>
+</div>
+<!-- Micro Interaction Modal: Quick Add Task Sheet -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-sm hidden items-end sm:items-center sm:justify-center p-0 sm:p-4" id="quickAddModal">
+  <div class="w-full max-w-md bg-surface-container-lowest rounded-t-3xl sm:rounded-2xl p-5 shadow-2xl flex flex-col gap-4 max-h-[85vh] overflow-y-auto">
+    <div class="flex items-center justify-between pb-1">
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-lg bg-primary-fixed flex items-center justify-center text-primary">
+          <span class="material-symbols-outlined text-[20px]">add_task</span>
+        </div>
+        <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Quick Create Task</h3>
+      </div>
+      <button onclick="closeQuickAddModal()" class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface" id="closeModalBtn">
+        <span class="material-symbols-outlined text-[18px]">close</span>
+      </button>
+    </div>
+    <form id="createTaskForm" onsubmit="handleCreateTask(event)" class="flex flex-col gap-3">
+      <!-- Title -->
+      <div>
+        <label class="font-label-sm text-label-sm text-on-surface-variant mb-1 block font-semibold">Title</label>
+        <input required id="newTaskTitle" class="w-full h-11 px-3.5 rounded-xl bg-surface-container text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary border border-surface-container-high" placeholder="e.g. Operating Systems Lab 4" type="text"/>
+      </div>
+
+      <!-- ADDON: Subject from Timetable -->
+      <div>
+        <div class="flex items-center justify-between mb-1">
+          <label class="font-label-sm text-label-sm text-on-surface-variant font-semibold flex items-center gap-1">
+            <span class="material-symbols-outlined text-[16px] text-primary">school</span>
+            <span>Subject (from Timetable)</span>
+          </label>
+          <a href="timetable.html" class="text-[11px] text-primary hover:underline flex items-center gap-0.5">
+            <span>Timetable</span>
+            <span class="material-symbols-outlined text-[12px]">arrow_forward</span>
+          </a>
+        </div>
+        <select id="newTaskSubject" onchange="handleSubjectChange()" class="w-full h-11 px-3 rounded-xl bg-surface-container text-on-surface font-body-md text-body-md focus:outline-none border border-surface-container-high">
+          <!-- Populated dynamically from timetable events -->
+        </select>
+        <div id="customSubjectContainer" class="hidden mt-2">
+          <input id="customSubjectInput" placeholder="Enter custom subject name (e.g. Embedded Systems)" class="w-full h-10 px-3 rounded-xl bg-surface-container text-on-surface font-body-sm text-body-sm focus:outline-none border border-surface-container-high"/>
+        </div>
+      </div>
+
+      <!-- Type and Priority -->
+      <div class="grid grid-cols-2 gap-2">
+        <div>
+          <label class="font-label-sm text-label-sm text-on-surface-variant mb-1 block font-semibold">Type</label>
+          <select id="newTaskType" onchange="handleTypeChange()" class="w-full h-11 px-3 rounded-xl bg-surface-container text-on-surface font-body-md text-body-md focus:outline-none border border-surface-container-high">
+            <option value="lab">Lab Work</option>
+            <option value="assignment">Assignment</option>
+            <option value="homework">Homework</option>
+            <option value="CUSTOM">+ Custom Type</option>
+          </select>
+        </div>
+        <div>
+          <label class="font-label-sm text-label-sm text-on-surface-variant mb-1 block font-semibold">Priority</label>
+          <select id="newTaskPriority" class="w-full h-11 px-3 rounded-xl bg-surface-container text-on-surface font-body-md text-body-md focus:outline-none border border-surface-container-high">
+            <option value="high">High Priority</option>
+            <option value="medium" selected>Medium Priority</option>
+            <option value="low">Low Priority</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- ADDON: Custom Type Input (Shown when CUSTOM selected) -->
+      <div id="customTypeContainer" class="hidden flex-col gap-1">
+        <label class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Custom Type Name</label>
+        <input id="customTypeInput" placeholder="e.g. Project, Presentation, Quiz Prep" class="w-full h-10 px-3.5 rounded-xl bg-surface-container text-on-surface font-body-sm text-body-sm focus:outline-none border border-surface-container-high"/>
+      </div>
+
+      <!-- Description (Optional) -->
+      <div>
+        <label class="font-label-sm text-label-sm text-on-surface-variant mb-1 block font-semibold">Description (Optional)</label>
+        <input id="newTaskDesc" class="w-full h-10 px-3.5 rounded-xl bg-surface-container text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary border border-surface-container-high" placeholder="Brief details, instructions or topics" type="text"/>
+      </div>
+
+      <!-- ADDON: Due Date & Due Time -->
+      <div class="grid grid-cols-2 gap-2">
+        <div>
+          <label class="font-label-sm text-label-sm text-on-surface-variant mb-1 block font-semibold flex items-center gap-1">
+            <span class="material-symbols-outlined text-[15px] text-primary">calendar_today</span>
+            <span>Due Date</span>
+          </label>
+          <input type="date" id="newTaskDueDate" required class="w-full h-11 px-3 rounded-xl bg-surface-container text-on-surface font-body-md text-body-md focus:outline-none border border-surface-container-high font-mono text-sm"/>
+        </div>
+        <div>
+          <label class="font-label-sm text-label-sm text-on-surface-variant mb-1 block font-semibold flex items-center gap-1">
+            <span class="material-symbols-outlined text-[15px] text-primary">schedule</span>
+            <span>Due Time</span>
+          </label>
+          <input type="time" id="newTaskDueTime" required value="23:59" class="w-full h-11 px-3 rounded-xl bg-surface-container text-on-surface font-body-md text-body-md focus:outline-none border border-surface-container-high font-mono text-sm"/>
+        </div>
+      </div>
+
+      <!-- Smart Notification Checkbox (Preserved from screenshot) -->
+      <div class="flex items-center justify-between p-3 rounded-xl bg-surface-container-low border border-surface-container-high/50">
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-[20px] text-primary">notifications_active</span>
+          <div class="flex flex-col">
+            <span class="font-label-sm text-label-sm text-on-surface font-semibold">Smart Notification</span>
+            <span class="font-body-sm text-body-sm text-outline text-xs">Remind 2h before due date</span>
+          </div>
+        </div>
+        <input type="checkbox" id="newTaskNotification" checked class="w-5 h-5 rounded accent-primary cursor-pointer"/>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="w-full h-12 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg shadow-md hover:bg-primary-container active:scale-98 transition-all flex items-center justify-center gap-2 mt-2 font-bold shadow-primary/25" id="saveTaskBtn">
+        <span class="material-symbols-outlined text-[18px]">check</span>
+        <span>Save &amp; Schedule</span>
+      </button>
+    </form>
+  </div>
+</div>
+
+<!-- Reschedule Overdue Task Modal Sheet -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-sm hidden items-end sm:items-center sm:justify-center p-0 sm:p-4" id="rescheduleModal">
+  <div class="w-full max-w-md bg-surface-container-lowest rounded-t-3xl sm:rounded-2xl p-5 shadow-2xl flex flex-col gap-4 max-h-[85vh] overflow-y-auto">
+    <div class="flex items-center justify-between pb-1 border-b border-surface-container-high/60">
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-lg bg-error-container flex items-center justify-center text-error">
+          <span class="material-symbols-outlined text-[20px]">edit_calendar</span>
+        </div>
+        <div>
+          <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold text-base">Reschedule Overdue Task</h3>
+          <p class="font-body-sm text-body-sm text-on-surface-variant text-xs">Set a new deadline to restore to active tasks</p>
+        </div>
+      </div>
+      <button type="button" onclick="closeRescheduleModal()" class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface cursor-pointer" id="closeRescheduleModalBtn">
+        <span class="material-symbols-outlined text-[18px]">close</span>
+      </button>
+    </div>
+
+    <!-- Task Details Card -->
+    <div class="p-3.5 rounded-xl bg-surface-container-low border border-surface-container-high flex flex-col gap-1">
+      <div class="flex items-center gap-1.5 text-xs text-error font-bold">
+        <span class="material-symbols-outlined text-[15px]">warning</span>
+        <span>Overdue Item</span>
+      </div>
+      <span class="font-headline-sm text-sm text-on-surface font-bold">Machine Learning Problem Set 2</span>
+      <span class="text-xs text-on-surface-variant">Support Vector Machines &amp; Kernel Tricks • CS-515</span>
+    </div>
+
+    <!-- Quick Presets -->
+    <div class="flex flex-col gap-1.5">
+      <label class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Quick Reschedule Presets</label>
+      <div class="grid grid-cols-3 gap-2">
+        <button type="button" onclick="applyReschedulePreset('today')" class="py-2 px-1.5 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-xs font-semibold text-center active:scale-95 transition-all cursor-pointer">
+          Today 11:59 PM
+        </button>
+        <button type="button" onclick="applyReschedulePreset('tomorrow')" class="py-2 px-1.5 rounded-xl bg-primary-fixed/50 hover:bg-primary-fixed text-primary font-label-sm text-xs font-bold text-center active:scale-95 transition-all border border-primary/25 cursor-pointer">
+          Tomorrow
+        </button>
+        <button type="button" onclick="applyReschedulePreset('friday')" class="py-2 px-1.5 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-xs font-semibold text-center active:scale-95 transition-all cursor-pointer">
+          This Friday
+        </button>
+      </div>
+    </div>
+
+    <!-- Form for Custom Date & Time -->
+    <form id="rescheduleForm" onsubmit="handleConfirmReschedule(event)" class="flex flex-col gap-3">
+      <div class="grid grid-cols-2 gap-2">
+        <div>
+          <label class="font-label-sm text-label-sm text-on-surface-variant mb-1 block font-semibold flex items-center gap-1">
+            <span class="material-symbols-outlined text-[15px] text-primary">calendar_today</span>
+            <span>New Due Date</span>
+          </label>
+          <input type="date" id="rescheduleDueDate" required class="w-full h-11 px-3 rounded-xl bg-surface-container text-on-surface font-body-md text-body-md focus:outline-none border border-surface-container-high font-mono text-sm"/>
+        </div>
+        <div>
+          <label class="font-label-sm text-label-sm text-on-surface-variant mb-1 block font-semibold flex items-center gap-1">
+            <span class="material-symbols-outlined text-[15px] text-primary">schedule</span>
+            <span>New Due Time</span>
+          </label>
+          <input type="time" id="rescheduleDueTime" required value="23:59" class="w-full h-11 px-3 rounded-xl bg-surface-container text-on-surface font-body-md text-body-md focus:outline-none border border-surface-container-high font-mono text-sm"/>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-2 pt-2">
+        <button type="button" onclick="closeRescheduleModal()" class="flex-1 h-12 rounded-xl bg-surface-container text-on-surface font-label-md text-label-md font-semibold hover:bg-surface-container-high active:scale-98 transition-all cursor-pointer">
+          Cancel
+        </button>
+        <button type="submit" class="flex-1 h-12 rounded-xl bg-primary text-on-primary font-label-md text-label-md font-bold shadow-md hover:bg-primary-container active:scale-98 transition-all flex items-center justify-center gap-1.5 shadow-primary/25 cursor-pointer">
+          <span class="material-symbols-outlined text-[18px]">event_repeat</span>
+          <span>Confirm</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Toast Notification -->
+<div id="toastNotification" class="fixed bottom-24 left-1/2 -translate-x-1/2 bg-inverse-surface text-inverse-on-surface px-4 py-2.5 rounded-full text-xs font-semibold shadow-2xl z-[120] transition-all opacity-0 pointer-events-none transform translate-y-3">
+  Notification
+</div>
+
+<script>
+  const TASKS_STORAGE_KEY = "college_os_tasks_data_v2";
+  const TIMETABLE_STORAGE_KEY = "college_os_timetable_events_v2";
+  const SEVEN_DAYS_MS = 7 * 24 * 60 * 60 * 1000; // 7 days in milliseconds
+
+  const DEFAULT_FALLBACK_SUBJECTS = [
+    "CS-401 • Advanced Algorithms",
+    "CS-403 • Operating Systems",
+    "CS-405 • Database Management Systems",
+    "CS-415L • Machine Learning Lab",
+    "CS-420 • Web Engineering",
+    "MATH-302 • Applied Linear Algebra"
+  ];
+
+  const DEFAULT_TASKS = [
+    {
+      id: "task_1",
+      title: "CS-402L Kernel Threads Lab Report",
+      subject: "CS-403 • Operating Systems",
+      description: "Benchmark multi-threaded mutex lock contention on Linux 6.2 kernel.",
+      category: "lab",
+      categoryName: "Lab Work",
+      priority: "high",
+      dueDate: new Date().toISOString().split("T")[0],
+      dueDateLabel: "Today",
+      dueTime: "11:59 PM",
+      hasNotification: true,
+      hasFile: true,
+      fileName: "kernel_benchmarks.log",
+      fileSize: "240 KB",
+      completed: false,
+      completedAt: null,
+      createdAt: Date.now() - 36000000
+    },
+    {
+      id: "task_2",
+      title: "Interactive Web Engineering Milestone 2",
+      subject: "CS-420 • Web Engineering",
+      description: "Implement responsive grid layouts with Tailwind CSS and CSS Grid.",
+      category: "homework",
+      categoryName: "Homework",
+      priority: "medium",
+      dueDate: new Date(Date.now() + 86400000).toISOString().split("T")[0],
+      dueDateLabel: "Tomorrow",
+      dueTime: "5:00 PM",
+      hasNotification: true,
+      hasFile: false,
+      completed: false,
+      completedAt: null,
+      createdAt: Date.now() - 25000000
+    },
+    {
+      id: "task_3",
+      title: "Database Normalization Group Project",
+      subject: "CS-405 • Database Management Systems",
+      description: "Deconstruct hospital records schema into BCNF & 4NF forms with PostgreSQL DDL.",
+      category: "assignment",
+      categoryName: "Assignment",
+      priority: "high",
+      dueDate: new Date(Date.now() + 172800000).toISOString().split("T")[0],
+      dueDateLabel: "Friday",
+      dueTime: "2:00 PM",
+      hasNotification: false,
+      hasFile: true,
+      fileName: "ERD.pdf, schema.sql",
+      fileSize: "1.2 MB",
+      completed: false,
+      completedAt: null,
+      createdAt: Date.now() - 15000000
+    },
+    {
+      id: "task_4",
+      title: "Calculus III Problem Set 4 (Green's Theorem)",
+      subject: "MATH-302 • Applied Linear Algebra",
+      description: "Line integrals and circulation density across 2D vector fields.",
+      category: "homework",
+      categoryName: "Homework",
+      priority: "medium",
+      dueDate: new Date(Date.now() - 172800000).toISOString().split("T")[0],
+      dueDateLabel: "Earlier this week",
+      dueTime: "10:15 AM",
+      hasNotification: false,
+      hasFile: false,
+      completed: true,
+      completedAt: Date.now() - (2 * 24 * 60 * 60 * 1000), // completed 2 days ago
+      createdAt: Date.now() - (5 * 24 * 60 * 60 * 1000)
+    },
+    {
+      id: "task_5",
+      title: "Software Engineering Agile Sprint 1 Retro",
+      subject: "CS-401 • Advanced Algorithms",
+      description: "Sprint retrospectives and user story velocity review.",
+      category: "assignment",
+      categoryName: "Assignment",
+      priority: "low",
+      dueDate: new Date(Date.now() - 86400000).toISOString().split("T")[0],
+      dueDateLabel: "Earlier this week",
+      dueTime: "4:00 PM",
+      hasNotification: false,
+      hasFile: false,
+      completed: true,
+      completedAt: Date.now() - (1 * 24 * 60 * 60 * 1000), // completed 1 day ago
+      createdAt: Date.now() - (4 * 24 * 60 * 60 * 1000)
+    }
+  ];
+
+  let tasks = [];
+  let currentCategoryFilter = 'all';
+  let searchQuery = '';
+
+  function escapeHtml(text) {
+    if (!text) return "";
+    return text.toString()
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
+  }
+
+  function formatClockTime(val) {
+    if (!val) return "11:59 PM";
+    if (val.includes("AM") || val.includes("PM")) return val;
+    const parts = val.split(":");
+    if (parts.length < 2) return val;
+    let h = parseInt(parts[0], 10);
+    const m = parts[1];
+    const ampm = h >= 12 ? "PM" : "AM";
+    h = h % 12;
+    if (h === 0) h = 12;
+    return `${h}:${m} ${ampm}`;
+  }
+
+  function loadTasks() {
+    try {
+      const raw = localStorage.getItem(TASKS_STORAGE_KEY);
+      tasks = raw ? JSON.parse(raw) : DEFAULT_TASKS;
+    } catch (e) {
+      tasks = DEFAULT_TASKS;
+    }
+    // 7-day automatic purge for completed tasks
+    cleanupExpiredTasks();
+  }
+
+  function saveTasks() {
+    try {
+      localStorage.setItem(TASKS_STORAGE_KEY, JSON.stringify(tasks));
+      if (window.CollegeOSCloud && typeof window.CollegeOSCloud.syncAllLocalToCloud === 'function') {
+        window.CollegeOSCloud.syncAllLocalToCloud();
+      }
+    } catch (e) {
+      console.error("Failed to save tasks", e);
+    }
+  }
+
+  // 7-DAY AUTOMATIC CLEANUP:
+  // Pending tasks (!task.completed) are NEVER deleted automatically.
+  // Completed tasks are automatically deleted once 7 days have passed since completion.
+  function cleanupExpiredTasks() {
+    const now = Date.now();
+    const initialLen = tasks.length;
+    tasks = tasks.filter(task => {
+      if (task.completed && task.completedAt) {
+        const elapsed = now - task.completedAt;
+        if (elapsed >= SEVEN_DAYS_MS) {
+          return false; // automatically deleted after 7 days
+        }
+      }
+      return true; // Keep pending tasks and recent completed tasks
+    });
+    if (tasks.length !== initialLen) {
+      saveTasks();
+    }
+  }
+
+  // Toggle complete / pending
+  function toggleTaskComplete(id) {
+    const task = tasks.find(t => t.id === id);
+    if (!task) return;
+    if (!task.completed) {
+      task.completed = true;
+      task.completedAt = Date.now();
+      showToast(`Task completed • Auto-cleans in 7 days`);
+    } else {
+      task.completed = false;
+      task.completedAt = null;
+      showToast(`Task restored to pending.`);
+    }
+    saveTasks();
+    renderTasks();
+  }
+
+  // MANUAL DELETION:
+  // User can delete pending or completed tasks manually anytime.
+  function deleteTaskManually(id) {
+    const task = tasks.find(t => t.id === id);
+    const title = task ? task.title : "Task";
+    if (confirm(`Permanently delete "${title}"?`)) {
+      tasks = tasks.filter(t => t.id !== id);
+      saveTasks();
+      if (window.CollegeOSCloud && typeof window.CollegeOSCloud.deleteWebTask === 'function') {
+        window.CollegeOSCloud.deleteWebTask(id);
+      }
+      renderTasks();
+      showToast(`Task deleted manually.`);
+    }
+  }
+
+  // Populate Subject dropdown from Timetable localStorage
+  function populateSubjectDropdown() {
+    const select = document.getElementById("newTaskSubject");
+    if (!select) return;
+
+    let timetableSubjects = [];
+    try {
+      const rawEvents = localStorage.getItem(TIMETABLE_STORAGE_KEY);
+      if (rawEvents) {
+        const parsed = JSON.parse(rawEvents);
+        if (Array.isArray(parsed)) {
+          parsed.forEach(item => {
+            if (item.type === 'class' && item.name) {
+              const fullLabel = item.code ? `${item.code} • ${item.name}` : item.name;
+              if (!timetableSubjects.includes(fullLabel)) {
+                timetableSubjects.push(fullLabel);
+              }
+            }
+          });
+        }
+      }
+    } catch (e) {
+      console.warn("Could not read timetable events for subjects", e);
+    }
+
+    let optionsHtml = '';
+    if (timetableSubjects.length > 0) {
+      optionsHtml += `<optgroup label="From Your Timetable">`;
+      timetableSubjects.forEach(sub => {
+        optionsHtml += `<option value="${escapeHtml(sub)}">${escapeHtml(sub)} (Timetable)</option>`;
+      });
+      optionsHtml += `</optgroup>`;
+
+      // Other course fallbacks not already in timetable
+      const others = DEFAULT_FALLBACK_SUBJECTS.filter(s => !timetableSubjects.includes(s));
+      if (others.length > 0) {
+        optionsHtml += `<optgroup label="Other Standard Courses">`;
+        others.forEach(sub => {
+          optionsHtml += `<option value="${escapeHtml(sub)}">${escapeHtml(sub)}</option>`;
+        });
+        optionsHtml += `</optgroup>`;
+      }
+    } else {
+      optionsHtml += `<optgroup label="Standard Registered Courses">`;
+      DEFAULT_FALLBACK_SUBJECTS.forEach(sub => {
+        optionsHtml += `<option value="${escapeHtml(sub)}">${escapeHtml(sub)}</option>`;
+      });
+      optionsHtml += `</optgroup>`;
+    }
+
+    optionsHtml += `<option value="CUSTOM">+ Other / Custom Subject</option>`;
+    select.innerHTML = optionsHtml;
+  }
+
+  // Handle Subject selection change
+  function handleSubjectChange() {
+    const select = document.getElementById("newTaskSubject");
+    const container = document.getElementById("customSubjectContainer");
+    const input = document.getElementById("customSubjectInput");
+    if (!select || !container) return;
+    if (select.value === "CUSTOM") {
+      container.classList.remove("hidden");
+      if (input) input.focus();
+    } else {
+      container.classList.add("hidden");
+    }
+  }
+
+  // Handle Type selection change
+  function handleTypeChange() {
+    const select = document.getElementById("newTaskType");
+    const container = document.getElementById("customTypeContainer");
+    const input = document.getElementById("customTypeInput");
+    if (!select || !container) return;
+    if (select.value === "CUSTOM") {
+      container.classList.remove("hidden");
+      container.classList.add("flex");
+      if (input) input.focus();
+    } else {
+      container.classList.add("hidden");
+      container.classList.remove("flex");
+    }
+  }
+
+  // Render tasks (both pending and completed)
+  function renderTasks() {
+    cleanupExpiredTasks();
+
+    const pendingContainer = document.getElementById("taskListContainer");
+    const completedContainer = document.getElementById("completedTasksList");
+    const completedCountBadge = document.getElementById("completedCountBadge");
+    const momentumText = document.getElementById("sprintMomentumText");
+
+    // Filter by category and search (search matches title, subject, description)
+    const filteredTasks = tasks.filter(t => {
+      const matchCat = currentCategoryFilter === 'all' || t.category === currentCategoryFilter;
+      const matchSearch = !searchQuery || 
+        t.title.toLowerCase().includes(searchQuery) || 
+        (t.subject && t.subject.toLowerCase().includes(searchQuery)) ||
+        (t.description && t.description.toLowerCase().includes(searchQuery));
+      return matchCat && matchSearch;
+    });
+
+    const pendingTasks = filteredTasks.filter(t => !t.completed);
+    const completedTasks = filteredTasks.filter(t => t.completed);
+
+    // Update Counts
+    const allPending = tasks.filter(t => !t.completed);
+    const allCompleted = tasks.filter(t => t.completed);
+    const totalCount = tasks.length;
+    const completedCount = allCompleted.length;
+    const momentum = totalCount > 0 ? Math.round((completedCount / totalCount) * 100) : 0;
+
+    if (momentumText) {
+      momentumText.innerHTML = `
+        <span class="w-2 h-2 rounded-full bg-secondary"></span>
+        <span>${completedCount} of ${totalCount} completed • ${momentum}% momentum</span>
+      `;
+    }
+
+    if (completedCountBadge) {
+      completedCountBadge.textContent = `${completedCount} Completed`;
+    }
+
+    // Category pills count badges
+    const badgeAll = document.getElementById("countBadgeAll");
+    const badgeAssign = document.getElementById("countBadgeAssignment");
+    const badgeHome = document.getElementById("countBadgeHomework");
+    const badgeLab = document.getElementById("countBadgeLab");
+
+    if (badgeAll) badgeAll.textContent = tasks.length;
+    if (badgeAssign) badgeAssign.textContent = tasks.filter(t => t.category === 'assignment').length;
+    if (badgeHome) badgeHome.textContent = tasks.filter(t => t.category === 'homework').length;
+    if (badgeLab) badgeLab.textContent = tasks.filter(t => t.category === 'lab').length;
+
+    // 1. Render Pending Tasks
+    if (pendingContainer) {
+      if (pendingTasks.length === 0) {
+        pendingContainer.innerHTML = `
+          <div class="p-8 rounded-2xl bg-surface-container-lowest text-center flex flex-col items-center border border-surface-container-high/60 shadow-sm">
+            <div class="w-16 h-16 rounded-2xl bg-primary-fixed/40 text-primary flex items-center justify-center mb-3">
+              <span class="material-symbols-outlined text-[32px]">task_alt</span>
+            </div>
+            <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">All caught up!</h3>
+            <p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs mt-1">
+              No pending tasks matching your current filters. Pending tasks stay here until you manually delete them.
+            </p>
+            <button onclick="openQuickAddModal()" class="mt-4 px-4 py-2 rounded-xl bg-primary text-on-primary font-label-md text-label-md font-bold active:scale-95 transition-all shadow-sm">
+              + Create New Task
+            </button>
+          </div>
+        `;
+      } else {
+        pendingContainer.innerHTML = pendingTasks.map(task => {
+          let catBg = "bg-primary-fixed text-on-primary-fixed";
+          let catIcon = "assignment";
+          let catName = "Assignment";
+          if (task.category === "lab") {
+            catBg = "bg-tertiary-fixed text-on-tertiary-fixed";
+            catIcon = "biotech";
+            catName = "Lab Work";
+          } else if (task.category === "homework") {
+            catBg = "bg-secondary-container text-on-secondary-container";
+            catIcon = "menu_book";
+            catName = "Homework";
+          } else if (task.category === "custom" || (task.category && task.category !== "assignment")) {
+            catBg = "bg-surface-container-high text-on-surface font-medium";
+            catIcon = "label";
+            catName = task.categoryName || task.category;
+          }
+
+          let priorityBg = "bg-surface-container-high text-on-surface-variant";
+          let priorityIcon = "low_priority";
+          let priorityName = "Medium Priority";
+          if (task.priority === "high") {
+            priorityBg = "bg-error-container text-on-error-container font-semibold";
+            priorityIcon = "priority_high";
+            priorityName = "High Priority";
+          } else if (task.priority === "low") {
+            priorityBg = "bg-surface-container text-on-surface-variant";
+            priorityIcon = "arrow_downward";
+            priorityName = "Low Priority";
+          }
+
+          return `
+            <div class="task-card group relative bg-surface-container-lowest rounded-xl p-4 shadow-sm hover:shadow-md transition-all flex flex-col gap-3 border border-surface-container-high/40">
+              <div class="flex items-start gap-3">
+                <button onclick="toggleTaskComplete('${task.id}')" aria-label="Mark task done" class="mt-1 w-6 h-6 rounded-lg bg-surface-container-high flex items-center justify-center text-transparent hover:text-secondary hover:bg-secondary-container active:scale-90 transition-all flex-shrink-0">
+                  <span class="material-symbols-outlined text-[18px]">check</span>
+                </button>
+                <div class="flex-1 min-w-0">
+                  <div class="flex items-center gap-1.5 flex-wrap mb-1.5">
+                    ${task.subject ? `
+                      <span class="px-2 py-0.5 rounded-full bg-secondary-fixed/50 text-on-secondary-fixed font-label-sm text-[11px] font-semibold flex items-center gap-1 border border-secondary-fixed/60">
+                        <span class="material-symbols-outlined text-[12px] text-secondary">school</span>
+                        <span class="truncate max-w-[150px] sm:max-w-xs">${escapeHtml(task.subject)}</span>
+                      </span>
+                    ` : ''}
+                    <span class="px-2 py-0.5 rounded-full ${catBg} font-label-sm text-label-sm flex items-center gap-1">
+                      <span class="material-symbols-outlined text-[12px]">${catIcon}</span>
+                      <span>${escapeHtml(catName)}</span>
+                    </span>
+                    <span class="px-2 py-0.5 rounded-full ${priorityBg} font-label-sm text-label-sm flex items-center gap-1">
+                      <span class="material-symbols-outlined text-[12px]">${priorityIcon}</span>
+                      <span>${priorityName}</span>
+                    </span>
+                    <span class="font-body-sm text-body-sm text-outline ml-auto flex items-center gap-1">
+                      <span class="material-symbols-outlined text-[14px]">alarm</span>
+                      <span>${task.dueDateLabel || 'Due'} ${task.dueTime ? '• ' + task.dueTime : ''}</span>
+                      ${task.hasNotification ? `<span title="Reminder scheduled 2h before" class="material-symbols-outlined text-[14px] text-primary ml-0.5">notifications_active</span>` : ''}
+                    </span>
+                    <button onclick="deleteTaskManually('${task.id}')" title="Delete task manually" class="w-7 h-7 rounded-lg text-on-surface-variant hover:text-error hover:bg-error-container/40 flex items-center justify-center transition-all active:scale-90 ml-1">
+                      <span class="material-symbols-outlined text-[16px]">delete</span>
+                    </button>
+                  </div>
+                  <h4 class="task-title font-headline-sm text-headline-sm text-on-surface font-semibold">${escapeHtml(task.title)}</h4>
+                  ${task.description ? `<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">${escapeHtml(task.description)}</p>` : ''}
+                  ${task.hasFile ? `
+                    <div class="mt-3 flex items-center gap-2 flex-wrap">
+                      <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-surface-container-high text-on-surface font-body-sm text-body-sm">
+                        <span class="material-symbols-outlined text-[16px] text-tertiary">description</span>
+                        <span class="font-label-sm text-label-sm font-normal">${escapeHtml(task.fileName || 'attachment')}</span>
+                        <span class="text-outline text-label-sm">${escapeHtml(task.fileSize || '')}</span>
+                      </div>
+                    </div>
+                  ` : ''}
+                </div>
+              </div>
+            </div>
+          `;
+        }).join("");
+      }
+    }
+
+    // 2. Render Completed Tasks (with Auto-Clean in 7 Days Badge & Manual Delete)
+    if (completedContainer) {
+      if (completedTasks.length === 0) {
+        completedContainer.innerHTML = `
+          <div class="py-4 text-center text-xs text-on-surface-variant/70 italic">
+            No completed tasks. Completed tasks will auto-delete after 7 days or can be deleted manually.
+          </div>
+        `;
+      } else {
+        const now = Date.now();
+        completedContainer.innerHTML = completedTasks.map(task => {
+          const compTime = task.completedAt || now;
+          const elapsed = now - compTime;
+          const remainingMs = SEVEN_DAYS_MS - elapsed;
+          const remainingDays = Math.max(1, Math.ceil(remainingMs / (24 * 60 * 60 * 1000)));
+
+          return `
+            <div class="flex items-center justify-between p-3 rounded-xl bg-surface-container-lowest/80 border border-surface-container-high/50 hover:bg-surface-container-lowest transition-all">
+              <div class="flex items-center gap-3 min-w-0">
+                <button onclick="toggleTaskComplete('${task.id}')" title="Restore to pending" class="w-6 h-6 rounded-lg bg-secondary text-on-secondary flex items-center justify-center hover:opacity-80 active:scale-90 transition-all flex-shrink-0">
+                  <span class="material-symbols-outlined text-[16px]">check</span>
+                </button>
+                <div class="flex flex-col min-w-0">
+                  <span class="font-body-md text-body-md text-on-surface line-through opacity-70 truncate font-medium">${escapeHtml(task.title)}</span>
+                  <div class="flex items-center gap-2 mt-0.5 flex-wrap">
+                    ${task.subject ? `<span class="text-[11px] font-medium text-secondary truncate max-w-[130px]">${escapeHtml(task.subject)}</span>` : ''}
+                    <span class="px-2 py-0.5 rounded-full bg-secondary-container/70 text-on-secondary-container font-label-sm text-[11px] font-semibold flex items-center gap-1">
+                      <span class="material-symbols-outlined text-[13px]">auto_delete</span>
+                      <span>Auto-cleans in ${remainingDays}d</span>
+                    </span>
+                    <span class="text-[11px] text-on-surface-variant/70">Completed</span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center gap-1.5 flex-shrink-0 ml-2">
+                <button onclick="deleteTaskManually('${task.id}')" title="Delete completed task manually" class="w-8 h-8 rounded-lg text-on-surface-variant hover:text-error hover:bg-error-container/40 flex items-center justify-center transition-all active:scale-90">
+                  <span class="material-symbols-outlined text-[18px]">delete</span>
+                </button>
+              </div>
+            </div>
+          `;
+        }).join("");
+      }
+    }
+  }
+
+  // Create Task Handler
+  function handleCreateTask(e) {
+    if (e) e.preventDefault();
+    const titleInput = document.getElementById("newTaskTitle");
+    const subjectSelect = document.getElementById("newTaskSubject");
+    const customSubjectInput = document.getElementById("customSubjectInput");
+    const descInput = document.getElementById("newTaskDesc");
+    const typeSelect = document.getElementById("newTaskType");
+    const customTypeInput = document.getElementById("customTypeInput");
+    const prioritySelect = document.getElementById("newTaskPriority");
+    const dateInput = document.getElementById("newTaskDueDate");
+    const timeInput = document.getElementById("newTaskDueTime");
+    const notifCheckbox = document.getElementById("newTaskNotification");
+
+    const title = titleInput ? titleInput.value.trim() : "";
+    if (!title) return;
+
+    // Resolve subject (from timetable dropdown or custom)
+    let subject = "";
+    if (subjectSelect) {
+      if (subjectSelect.value === "CUSTOM") {
+        subject = customSubjectInput ? customSubjectInput.value.trim() : "";
+        if (!subject) subject = "Custom Subject";
+      } else {
+        subject = subjectSelect.value;
+      }
+    }
+
+    // Resolve category/type
+    let category = "assignment";
+    let categoryName = "Assignment";
+    if (typeSelect) {
+      if (typeSelect.value === "CUSTOM") {
+        const cName = customTypeInput ? customTypeInput.value.trim() : "";
+        category = "custom";
+        categoryName = cName || "Custom";
+      } else {
+        category = typeSelect.value;
+        if (category === "lab") categoryName = "Lab Work";
+        else if (category === "homework") categoryName = "Homework";
+        else categoryName = "Assignment";
+      }
+    }
+
+    // Resolve due date label
+    let dueDateLabel = "Upcoming";
+    if (dateInput && dateInput.value) {
+      const todayStr = new Date().toISOString().split("T")[0];
+      const tomorrowObj = new Date();
+      tomorrowObj.setDate(tomorrowObj.getDate() + 1);
+      const tomorrowStr = tomorrowObj.toISOString().split("T")[0];
+      if (dateInput.value === todayStr) {
+        dueDateLabel = "Today";
+      } else if (dateInput.value === tomorrowStr) {
+        dueDateLabel = "Tomorrow";
+      } else {
+        const d = new Date(dateInput.value + "T00:00:00");
+        dueDateLabel = d.toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" });
+      }
+    }
+
+    const rawTime = timeInput ? timeInput.value : "23:59";
+    const formattedDueTime = formatClockTime(rawTime);
+    const hasNotification = notifCheckbox ? notifCheckbox.checked : true;
+
+    const newTask = {
+      id: "task_" + Date.now(),
+      title,
+      subject,
+      description: descInput ? descInput.value.trim() : "",
+      category,
+      categoryName,
+      priority: prioritySelect ? prioritySelect.value : "medium",
+      dueDate: dateInput ? dateInput.value : "",
+      dueDateLabel,
+      dueTime: formattedDueTime,
+      hasNotification,
+      hasFile: false,
+      completed: false,
+      completedAt: null,
+      createdAt: Date.now()
+    };
+
+    tasks.unshift(newTask);
+    saveTasks();
+    closeQuickAddModal();
+    renderTasks();
+    showToast(`Task created! (Kept until manually deleted)`);
+
+    // Reset inputs
+    if (titleInput) titleInput.value = "";
+    if (descInput) descInput.value = "";
+    if (customSubjectInput) customSubjectInput.value = "";
+    if (customTypeInput) customTypeInput.value = "";
+    if (typeSelect) typeSelect.value = "assignment";
+    handleSubjectChange();
+    handleTypeChange();
+  }
+
+  function openQuickAddModal() {
+    const modal = document.getElementById("quickAddModal");
+    if (!modal) return;
+
+    // Refresh subjects list from timetable events
+    populateSubjectDropdown();
+
+    const dateInput = document.getElementById("newTaskDueDate");
+    if (dateInput && !dateInput.value) {
+      dateInput.value = new Date().toISOString().split("T")[0];
+    }
+    const timeInput = document.getElementById("newTaskDueTime");
+    if (timeInput && !timeInput.value) {
+      timeInput.value = "23:59";
+    }
+
+    handleSubjectChange();
+    handleTypeChange();
+
+    modal.classList.remove("hidden");
+    modal.classList.add("flex");
+  }
+
+  function closeQuickAddModal() {
+    const modal = document.getElementById("quickAddModal");
+    if (modal) {
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+    }
+  }
+
+  function showToast(msg) {
+    const toast = document.getElementById("toastNotification");
+    if (!toast) return;
+    toast.textContent = msg;
+    toast.classList.remove("opacity-0", "translate-y-3");
+    toast.classList.add("opacity-100", "translate-y-0");
+    setTimeout(() => {
+      toast.classList.remove("opacity-100", "translate-y-0");
+      toast.classList.add("opacity-0", "translate-y-3");
+    }, 2800);
+  }
+
+  // ==============================================
+  // OVERDUE TASK: DISMISS & RESCHEDULE HANDLERS
+  // ==============================================
+  function checkOverdueState() {
+    const card = document.getElementById("overdueAlertCard");
+    if (!card) return;
+    const isDismissed = localStorage.getItem("college_os_overdue_dismissed") === "true";
+    const isResolved = localStorage.getItem("college_os_overdue_resolved") === "true";
+    if (isDismissed || isResolved) {
+      card.style.display = "none";
+    } else {
+      card.style.display = "block";
+    }
+  }
+
+  function handleDismissOverdue() {
+    const card = document.getElementById("overdueAlertCard");
+    if (!card) return;
+    card.style.transition = "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)";
+    card.style.opacity = "0";
+    card.style.transform = "translateY(-8px) scale(0.98)";
+    setTimeout(() => {
+      card.style.display = "none";
+      localStorage.setItem("college_os_overdue_dismissed", "true");
+      showToast("Overdue task dismissed.");
+    }, 280);
+  }
+
+  function openRescheduleModal() {
+    const modal = document.getElementById("rescheduleModal");
+    if (!modal) return;
+    
+    // Default new date to tomorrow
+    const tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    const tomorrowStr = tomorrow.toISOString().split("T")[0];
+    
+    const dateInput = document.getElementById("rescheduleDueDate");
+    const timeInput = document.getElementById("rescheduleDueTime");
+    if (dateInput) dateInput.value = tomorrowStr;
+    if (timeInput) timeInput.value = "23:59";
+
+    modal.classList.remove("hidden");
+    modal.classList.add("flex");
+  }
+
+  function closeRescheduleModal() {
+    const modal = document.getElementById("rescheduleModal");
+    if (modal) {
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+    }
+  }
+
+  function applyReschedulePreset(preset) {
+    const dateInput = document.getElementById("rescheduleDueDate");
+    const timeInput = document.getElementById("rescheduleDueTime");
+    const now = new Date();
+
+    if (preset === 'today') {
+      if (dateInput) dateInput.value = now.toISOString().split("T")[0];
+      if (timeInput) timeInput.value = "23:59";
+    } else if (preset === 'tomorrow') {
+      const tomorrow = new Date(now);
+      tomorrow.setDate(tomorrow.getDate() + 1);
+      if (dateInput) dateInput.value = tomorrow.toISOString().split("T")[0];
+      if (timeInput) timeInput.value = "23:59";
+    } else if (preset === 'friday') {
+      const d = new Date(now);
+      const day = d.getDay();
+      const distance = (5 - day + 7) % 7 || 7;
+      d.setDate(d.getDate() + distance);
+      if (dateInput) dateInput.value = d.toISOString().split("T")[0];
+      if (timeInput) timeInput.value = "17:00";
+    }
+    showToast(`Preset selected: ${preset.toUpperCase()}`);
+  }
+
+  function handleConfirmReschedule(e) {
+    if (e) e.preventDefault();
+    const dateInput = document.getElementById("rescheduleDueDate");
+    const timeInput = document.getElementById("rescheduleDueTime");
+
+    if (!dateInput || !dateInput.value) {
+      alert("Please select a new due date.");
+      return;
+    }
+
+    const chosenDate = dateInput.value;
+    const chosenTime = timeInput ? timeInput.value : "23:59";
+    const formattedDueTime = formatClockTime(chosenTime);
+
+    // Calculate dynamic label
+    const todayStr = new Date().toISOString().split("T")[0];
+    const tomorrowObj = new Date();
+    tomorrowObj.setDate(tomorrowObj.getDate() + 1);
+    const tomorrowStr = tomorrowObj.toISOString().split("T")[0];
+
+    let dueDateLabel = "Upcoming";
+    if (chosenDate === todayStr) {
+      dueDateLabel = "Today";
+    } else if (chosenDate === tomorrowStr) {
+      dueDateLabel = "Tomorrow";
+    } else {
+      const d = new Date(chosenDate + "T00:00:00");
+      dueDateLabel = d.toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" });
+    }
+
+    const rescheduledTask = {
+      id: "task_ml_ps2_" + Date.now(),
+      title: "Machine Learning Problem Set 2",
+      subject: "CS-515 • Machine Learning",
+      description: "Support Vector Machines & Kernel Tricks (Rescheduled)",
+      category: "assignment",
+      categoryName: "Assignment",
+      priority: "high",
+      dueDate: chosenDate,
+      dueDateLabel: dueDateLabel,
+      dueTime: formattedDueTime,
+      hasNotification: true,
+      hasFile: true,
+      fileName: "svm_dataset.zip",
+      fileSize: "3.4 MB",
+      completed: false,
+      completedAt: null,
+      createdAt: Date.now()
+    };
+
+    tasks.unshift(rescheduledTask);
+    saveTasks();
+
+    // Mark overdue card as resolved and hide it
+    localStorage.setItem("college_os_overdue_resolved", "true");
+    const card = document.getElementById("overdueAlertCard");
+    if (card) card.style.display = "none";
+
+    closeRescheduleModal();
+    renderTasks();
+    showToast(`Task rescheduled to ${dueDateLabel} • ${formattedDueTime}!`);
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    loadTasks();
+    renderTasks();
+    checkOverdueState();
+
+    // Accordion Toggle
+    const toggleCompletedBtn = document.getElementById('toggleCompletedBtn');
+    const completedTasksList = document.getElementById('completedTasksList');
+    const chevron = document.getElementById('accordionChevron');
+
+    if (toggleCompletedBtn && completedTasksList) {
+      toggleCompletedBtn.addEventListener('click', () => {
+        const isHidden = completedTasksList.classList.contains('hidden');
+        if (isHidden) {
+          completedTasksList.classList.remove('hidden');
+          if (chevron) chevron.classList.add('rotate-180');
+        } else {
+          completedTasksList.classList.add('hidden');
+          if (chevron) chevron.classList.remove('rotate-180');
+        }
+      });
+    }
+
+    // Category Filter Tabs
+    const catPills = document.querySelectorAll('.cat-pill');
+    catPills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        catPills.forEach(p => {
+          p.classList.remove('bg-primary', 'text-on-primary');
+          p.classList.add('bg-surface-container', 'text-on-surface-variant');
+        });
+        pill.classList.remove('bg-surface-container', 'text-on-surface-variant');
+        pill.classList.add('bg-primary', 'text-on-primary');
+
+        currentCategoryFilter = pill.getAttribute('data-filter') || 'all';
+        renderTasks();
+      });
+    });
+
+    // Search Input
+    const searchInput = document.getElementById('taskSearchInput');
+    const clearSearchBtn = document.getElementById('clearSearchBtn');
+
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        searchQuery = e.target.value.toLowerCase().trim();
+        if (searchQuery.length > 0 && clearSearchBtn) {
+          clearSearchBtn.classList.remove('hidden');
+        } else if (clearSearchBtn) {
+          clearSearchBtn.classList.add('hidden');
+        }
+        renderTasks();
+      });
+
+      if (clearSearchBtn) {
+        clearSearchBtn.addEventListener('click', () => {
+          searchInput.value = '';
+          searchQuery = '';
+          clearSearchBtn.classList.add('hidden');
+          renderTasks();
+        });
+      }
+    }
+
+    // Modal Triggers
+    const fabBtn = document.getElementById('addNewTaskBtn');
+    if (fabBtn) {
+      fabBtn.addEventListener('click', openQuickAddModal);
+    }
+    const closeBtn = document.getElementById('closeModalBtn');
+    if (closeBtn) {
+      closeBtn.addEventListener('click', closeQuickAddModal);
+    }
+
+    // Periodic check for 7-day expiration
+    setInterval(cleanupExpiredTasks, 60000);
+
+    // Realtime Cloud synchronization listener
+    window.addEventListener('college_os_tasks_updated', (e) => {
+      if (e.detail && Array.isArray(e.detail)) {
+        tasks = e.detail;
+        renderTasks();
+      }
+    });
+  });
+</script>
+<!-- Shared Firebase Cloud Sync & Authentication Gate Module -->
+<script type="module" src="./shared_firebase_cloud.js"></script>
+<!-- Progressive Web App Controller (Android Standalone Fullscreen Mode) -->
+<script type="module" src="./pwa_manager.js"></script>
+</main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.04)]" data-active-classes="[&amp;_.nav-pill]:bg-primary-fixed [&amp;_.nav-pill]:text-on-primary-fixed [&amp;_.nav-icon]:text-primary font-bold text-on-surface"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center w-16 h-12 text-on-surface-variant group transition-all" data-path="home" href="index.html"><div class="nav-pill w-12 h-7 rounded-full flex items-center justify-center transition-all"><span class="material-symbols-outlined nav-icon text-[22px]">home</span></div><span class="font-label-sm text-label-sm mt-0.5">Home</span></a><a class="flex flex-col items-center justify-center w-16 h-12 text-on-surface-variant group transition-all" data-path="timetable" href="timetable.html"><div class="nav-pill w-12 h-7 rounded-full flex items-center justify-center transition-all"><span class="material-symbols-outlined nav-icon text-[22px]">calendar_today</span></div><span class="font-label-sm text-label-sm mt-0.5">Timetable</span></a><a aria-current="page" class="flex flex-col items-center justify-center w-16 h-12 group transition-all [&amp;_.nav-pill]:bg-primary-fixed [&amp;_.nav-pill]:text-on-primary-fixed [&amp;_.nav-icon]:text-primary font-bold text-on-surface" data-path="tasks" href="tasks.html"><div class="nav-pill w-12 h-7 rounded-full flex items-center justify-center transition-all"><span class="material-symbols-outlined nav-icon text-[22px]">check_circle_outline</span></div><span class="font-label-sm text-label-sm mt-0.5">Tasks</span></a><a class="flex flex-col items-center justify-center w-16 h-12 text-on-surface-variant group transition-all" data-path="vault" href="vault.html"><div class="nav-pill w-12 h-7 rounded-full flex items-center justify-center transition-all"><span class="material-symbols-outlined nav-icon text-[22px]">folder_special</span></div><span class="font-label-sm text-label-sm mt-0.5">Vault</span></a><a class="flex flex-col items-center justify-center w-16 h-12 text-on-surface-variant group transition-all" data-path="profile" href="profile.html"><div class="nav-pill w-12 h-7 rounded-full flex items-center justify-center transition-all"><span class="material-symbols-outlined nav-icon text-[22px]">person_outline</span></div><span class="font-label-sm text-label-sm mt-0.5">Profile</span></a></div></nav></body></html>

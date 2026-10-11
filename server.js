@@ -276,21 +276,21 @@ async function requestHandler(req, res) {
   let targetFile = null;
 
   if (rawPath === '/' || reqPath === '/home' || reqPath === '/dashboard' || rawPath === '/index.html') {
-    targetFile = path.join(STITCH_DIR, 'home_dashboard', 'code.html');
-  } else if (reqPath === '/timetable') {
-    targetFile = path.join(STITCH_DIR, 'timetable_scheduler', 'code.html');
-  } else if (reqPath === '/tasks') {
-    targetFile = path.join(STITCH_DIR, 'tasks_assignments', 'code.html');
-  } else if (reqPath === '/vault') {
-    targetFile = path.join(STITCH_DIR, 'personal_data_vault', 'code.html');
-  } else if (reqPath === '/profile') {
-    targetFile = path.join(STITCH_DIR, 'student_profile_settings', 'code.html');
-  } else if (reqPath === '/attendance' || reqPath === '/rhythm' || reqPath === '/academic_rhythm') {
-    targetFile = path.join(STITCH_DIR, 'academic_rhythm', 'code.html');
+    targetFile = path.join(BASE_DIR, 'index.html');
+  } else if (reqPath === '/timetable' || reqPath === '/timetable.html') {
+    targetFile = path.join(BASE_DIR, 'timetable.html');
+  } else if (reqPath === '/tasks' || reqPath === '/tasks.html') {
+    targetFile = path.join(BASE_DIR, 'tasks.html');
+  } else if (reqPath === '/vault' || reqPath === '/vault.html') {
+    targetFile = path.join(BASE_DIR, 'vault.html');
+  } else if (reqPath === '/profile' || reqPath === '/profile.html') {
+    targetFile = path.join(BASE_DIR, 'profile.html');
+  } else if (reqPath === '/attendance' || reqPath === '/attendance.html' || reqPath === '/rhythm' || reqPath === '/academic_rhythm') {
+    targetFile = path.join(BASE_DIR, 'attendance.html');
   } else if (reqPath === '/shared_firebase_cloud.js') {
-    targetFile = path.join(STITCH_DIR, 'shared_firebase_cloud.js');
+    targetFile = path.join(BASE_DIR, 'shared_firebase_cloud.js');
   } else if (reqPath === '/portal' || reqPath === '/review') {
-    targetFile = path.join(BASE_DIR, 'portal.html');
+    targetFile = path.join(BASE_DIR, 'index.html');
   } else {
     // Check if path is relative from within stitch subdirectories
     const peerFolders = ['home_dashboard', 'timetable_scheduler', 'tasks_assignments', 'personal_data_vault', 'student_profile_settings', 'academic_rhythm'];

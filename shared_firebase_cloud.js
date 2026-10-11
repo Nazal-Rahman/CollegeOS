@@ -43,7 +43,7 @@ const CLOUDINARY_CONFIG = {
   apiKey: "168317929439692",
   apiSecret: "-UAA-eQTMujo2MvCz4fyhTktOi4",
   keyName: "Root",
-  cloudName: "college-os-001", // Default cloud namespace
+  cloudName: "gth8uxhh", // Verified student Cloudinary cloud namespace
   uploadPreset: "college_os_vault"
 };
 

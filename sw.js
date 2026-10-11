@@ -13,7 +13,9 @@ const PRECACHE_URLS = [
   '/profile',
   '/attendance',
   '/manifest.json',
-  '/icon.svg',
+  '/logo.png',
+  '/icon-192.png',
+  '/icon-512.png',
   '/pwa_manager.js',
   '/shared_firebase_cloud.js'
 ];
