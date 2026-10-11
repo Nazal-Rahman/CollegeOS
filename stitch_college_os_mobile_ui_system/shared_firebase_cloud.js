@@ -48,10 +48,19 @@ const CLOUDINARY_CONFIG = {
 };
 
 // Initialize Firebase Core
+if (typeof window !== "undefined" && window.location.hostname === "127.0.0.1") {
+  const target = window.location.href.replace("127.0.0.1", "localhost");
+  console.log("[Auth] Switching 127.0.0.1 to Firebase authorized domain localhost:", target);
+  window.location.replace(target);
+}
+
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 export const db = getFirestore(app);
 const googleProvider = new GoogleAuthProvider();
+googleProvider.setCustomParameters({
+  prompt: 'select_account'
+});
 
 // Current User State Helper
 export function getCurrentUser() {
@@ -760,7 +769,10 @@ function createAuthGateUI() {
     console.error("[Auth] Authentication error:", err);
     errorBox.classList.remove("hidden");
 
-    if (err.code === "auth/unauthorized-domain") {
+    const isUnauthorized = err.code === "auth/unauthorized-domain" || 
+                           (err.message && err.message.toLowerCase().includes("unauthorized"));
+
+    if (isUnauthorized) {
       const is127 = window.location.hostname === "127.0.0.1";
       errorBox.innerHTML = `
         <div class="flex flex-col gap-2 w-full text-left">
@@ -771,16 +783,34 @@ function createAuthGateUI() {
           <p class="text-[11px] text-on-error-container leading-snug">
             Firebase Auth blocked <b>${window.location.hostname}</b>.
             ${is127 
-              ? '<br/>👉 <b>Fix:</b> Open using <a href="http://localhost:3000" class="underline font-bold text-primary">http://localhost:3000</a> instead of 127.0.0.1.' 
-              : '<br/>👉 <b>Fix:</b> Add <code>' + window.location.hostname + '</code> in Firebase Console → Authentication → Settings → Authorized domains.'}
+              ? '<br/>👉 <b>1-Click Fix:</b> <a href="http://localhost:3000" class="underline font-bold text-primary">Switch to http://localhost:3000</a>' 
+              : '<br/>👉 <b>Fix:</b> Add <code>' + window.location.hostname + '</code> to Firebase Console → Authentication → Settings → Authorized domains.'}
           </p>
-          <button id="instantOfflineBypassBtn" type="button" class="mt-1 w-full py-2 px-3 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-bold text-xs flex items-center justify-center gap-1.5 shadow-sm active:scale-95 transition-all">
-            <span class="material-symbols-outlined text-[16px]">offline_bolt</span>
-            <span>Continue in Offline / Local Mode</span>
-          </button>
+          <div class="flex gap-2">
+            ${is127 ? '<a href="http://localhost:3000" class="flex-1 py-2 px-3 rounded-xl bg-primary text-on-primary font-bold text-xs text-center shadow-xs">Open localhost:3000</a>' : ''}
+            <button id="instantOfflineBypassBtn" type="button" class="flex-1 py-2 px-3 rounded-xl bg-secondary hover:bg-secondary-container text-on-secondary font-bold text-xs flex items-center justify-center gap-1 shadow-xs active:scale-95 transition-all">
+              <span class="material-symbols-outlined text-[15px]">offline_bolt</span>
+              <span>Use Offline Mode</span>
+            </button>
+          </div>
         </div>
       `;
       document.getElementById("instantOfflineBypassBtn")?.addEventListener("click", activateOfflineLocalSession);
+      return;
+    }
+
+    if (err.code === "auth/popup-closed-by-user" || err.code === "auth/cancelled-popup-request") {
+      errorBox.innerHTML = `
+        <div class="flex flex-col gap-1.5 text-left">
+          <div class="flex items-center gap-1.5 text-amber-500 font-bold text-xs">
+            <span class="material-symbols-outlined text-[16px]">info</span>
+            <span>Google Sign-In Popup Closed</span>
+          </div>
+          <p class="text-[11px] text-on-surface-variant leading-tight">
+            If the popup showed <i>"The requested action is invalid"</i>, open the app via <a href="http://localhost:3000" class="underline font-bold text-primary">http://localhost:3000</a> or continue in Offline Mode below.
+          </p>
+        </div>
+      `;
       return;
     }
 
@@ -810,11 +840,25 @@ function createAuthGateUI() {
 
   // Google Sign In Submit
   googleBtn.addEventListener("click", async () => {
+    // If on 127.0.0.1, switch to localhost before starting popup
+    if (window.location.hostname === "127.0.0.1") {
+      window.location.replace(window.location.href.replace("127.0.0.1", "localhost"));
+      return;
+    }
+
+    errorBox.classList.add("hidden");
+    googleBtn.disabled = true;
+    googleBtn.classList.add("opacity-60");
+
+    // Safety timeout: Re-enable button after 12s in case popup gets closed or hung
+    const resetTimer = setTimeout(() => {
+      googleBtn.disabled = false;
+      googleBtn.classList.remove("opacity-60");
+    }, 12000);
+
     try {
-      errorBox.classList.add("hidden");
-      googleBtn.disabled = true;
-      googleBtn.classList.add("opacity-60");
       const result = await signInWithPopup(auth, googleProvider);
+      clearTimeout(resetTimer);
       const user = result.user;
       
       // Seed profile name if available
@@ -827,8 +871,10 @@ function createAuthGateUI() {
       }
       showGlobalToast(`Welcome back, ${user.displayName || user.email}!`, "success");
     } catch (err) {
+      clearTimeout(resetTimer);
       renderAuthError(err);
     } finally {
+      clearTimeout(resetTimer);
       googleBtn.disabled = false;
       googleBtn.classList.remove("opacity-60");
     }

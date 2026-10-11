@@ -53,7 +53,14 @@ self.addEventListener('fetch', (event) => {
 
   // Skip non-GET and chrome-extension / firestore streaming / cloudinary upload requests
   if (req.method !== 'GET') return;
-  if (url.origin.includes('firestore.googleapis.com') || url.origin.includes('identitytoolkit')) return;
+  if (url.pathname.startsWith('/__/') || 
+      url.hostname.includes('firebaseapp.com') || 
+      url.hostname.includes('google.com') || 
+      url.hostname.includes('googleapis.com') ||
+      url.hostname.includes('identitytoolkit') ||
+      url.hostname.includes('cloudinary.com')) {
+    return;
+  }
   if (url.pathname.startsWith('/api/')) return;
 
   event.respondWith(

@@ -94,6 +94,16 @@ async function requestHandler(req, res) {
     return;
   }
 
+  // Automatic 127.0.0.1 -> localhost redirect to ensure Firebase Auth Authorized Domain compatibility
+  const host = req.headers.host || '';
+  if (host.startsWith('127.0.0.1')) {
+    const newHost = host.replace('127.0.0.1', 'localhost');
+    res.statusCode = 302;
+    res.setHeader('Location', `http://${newHost}${req.url}`);
+    res.end();
+    return;
+  }
+
   let rawPath = decodeURI(req.url.split('?')[0]);
   let reqPath = rawPath.toLowerCase();
 
