@@ -582,9 +582,9 @@ function createAuthGateUI() {
     <div class="w-full max-w-sm bg-surface-container-lowest rounded-[28px] p-6 shadow-2xl border border-surface-container-high/80 flex flex-col relative animate-in fade-in zoom-in-95 duration-200">
       
       <!-- Brand Header -->
-      <div class="flex flex-col items-center text-center mb-5">
-        <div class="w-14 h-14 rounded-2xl bg-primary-fixed/60 border border-primary/20 flex items-center justify-center text-primary shadow-sm mb-3">
-          <span class="material-symbols-outlined text-[32px]">school</span>
+      <div class="flex flex-col items-center text-center mb-4">
+        <div class="w-16 h-16 rounded-2xl bg-surface-container-high/60 border border-surface-container-highest flex items-center justify-center shadow-sm mb-2.5 overflow-hidden p-1.5">
+          <img src="/logo.png" alt="College OS Logo" class="w-full h-full object-contain"/>
         </div>
         <h2 class="font-headline-md text-headline-md text-on-surface font-extrabold tracking-tight">College OS</h2>
         <p class="font-body-sm text-body-sm text-on-surface-variant text-xs mt-1">
@@ -658,9 +658,11 @@ function createAuthGateUI() {
         </div>
 
         <!-- Auth Error Box -->
-        <div id="authErrorBox" class="hidden p-2.5 rounded-xl bg-error-container text-on-error-container font-body-sm text-xs flex items-center gap-2">
-          <span class="material-symbols-outlined text-[16px] text-error flex-shrink-0">error</span>
-          <span id="authErrorMsg" class="truncate">Authentication failed</span>
+        <div id="authErrorBox" class="hidden p-3 rounded-2xl bg-error-container/60 border border-error/30 text-on-error-container font-body-sm text-xs flex flex-col gap-2">
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-[18px] text-error flex-shrink-0">error</span>
+            <span id="authErrorMsg">Authentication failed</span>
+          </div>
         </div>
 
         <!-- Submit Button -->
@@ -670,10 +672,15 @@ function createAuthGateUI() {
         </button>
       </form>
 
-      <!-- Privacy & Android Sync Note -->
-      <div class="mt-4 pt-3 border-t border-surface-container-high/60 flex items-center justify-center gap-1.5 text-on-surface-variant/70 text-[11px]">
-        <span class="material-symbols-outlined text-[14px] text-secondary">cloud_sync</span>
-        <span>Secure offline &amp; Firebase cloud sync with Android app</span>
+      <!-- Offline / Local Bypass Button -->
+      <div class="mt-4 pt-3 border-t border-surface-container-high/60 flex flex-col items-center gap-1.5">
+        <button id="authSkipOfflineBtn" type="button" class="w-full py-2 px-3 rounded-xl bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-xs font-bold flex items-center justify-center gap-1.5 transition-all active:scale-98">
+          <span class="material-symbols-outlined text-[16px]">offline_bolt</span>
+          <span>Continue in Offline / Local Mode</span>
+        </button>
+        <span class="text-on-surface-variant/70 text-[10.5px] text-center mt-0.5">
+          Full offline functionality &amp; auto-sync when online
+        </span>
       </div>
     </div>
   `;
@@ -733,7 +740,75 @@ function createAuthGateUI() {
     passInput.focus();
   });
 
-  // Google Sign-In
+  // Offline Local Mode Bypass Helper
+  function activateOfflineLocalSession() {
+    const email = (emailInput?.value || "").trim() || "student@college.edu";
+    const name = (nameInput?.value || "").trim() || "Student";
+    const localUser = {
+      uid: "offline_student_" + Date.now().toString(36),
+      email: email,
+      displayName: name,
+      isLocalOffline: true
+    };
+    localStorage.setItem("college_os_local_auth_user", JSON.stringify(localUser));
+    removeAuthGateUI();
+    showGlobalToast("Offline mode active! All features & storage unlocked.", "info");
+    updateHeaderUserStatus(localUser);
+  }
+
+  function renderAuthError(err) {
+    console.error("[Auth] Authentication error:", err);
+    errorBox.classList.remove("hidden");
+
+    if (err.code === "auth/unauthorized-domain") {
+      const is127 = window.location.hostname === "127.0.0.1";
+      errorBox.innerHTML = `
+        <div class="flex flex-col gap-2 w-full text-left">
+          <div class="flex items-center gap-1.5 text-error font-bold text-xs">
+            <span class="material-symbols-outlined text-[17px]">domain_disabled</span>
+            <span>Domain Unauthorized by Firebase</span>
+          </div>
+          <p class="text-[11px] text-on-error-container leading-snug">
+            Firebase Auth blocked <b>${window.location.hostname}</b>.
+            ${is127 
+              ? '<br/>👉 <b>Fix:</b> Open using <a href="http://localhost:3000" class="underline font-bold text-primary">http://localhost:3000</a> instead of 127.0.0.1.' 
+              : '<br/>👉 <b>Fix:</b> Add <code>' + window.location.hostname + '</code> in Firebase Console → Authentication → Settings → Authorized domains.'}
+          </p>
+          <button id="instantOfflineBypassBtn" type="button" class="mt-1 w-full py-2 px-3 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-bold text-xs flex items-center justify-center gap-1.5 shadow-sm active:scale-95 transition-all">
+            <span class="material-symbols-outlined text-[16px]">offline_bolt</span>
+            <span>Continue in Offline / Local Mode</span>
+          </button>
+        </div>
+      `;
+      document.getElementById("instantOfflineBypassBtn")?.addEventListener("click", activateOfflineLocalSession);
+      return;
+    }
+
+    let msg = err.message.replace("Firebase: ", "");
+    if (err.code === "auth/invalid-credential" || err.code === "auth/wrong-password") {
+      msg = "Incorrect email or password. Please verify your typing.";
+    } else if (err.code === "auth/email-already-in-use") {
+      msg = "An account already exists with this email address.";
+    } else if (err.code === "auth/weak-password") {
+      msg = "Password should be at least 6 characters.";
+    } else if (err.code === "auth/network-request-failed") {
+      msg = "Network connection failed. Tap below to use offline mode.";
+    }
+
+    errorBox.innerHTML = `
+      <div class="flex items-center gap-2">
+        <span class="material-symbols-outlined text-[16px] text-error flex-shrink-0">error</span>
+        <span class="text-xs text-on-error-container leading-tight">${msg}</span>
+      </div>
+    `;
+  }
+
+  const skipOfflineBtn = document.getElementById("authSkipOfflineBtn");
+  if (skipOfflineBtn) {
+    skipOfflineBtn.addEventListener("click", activateOfflineLocalSession);
+  }
+
+  // Google Sign In Submit
   googleBtn.addEventListener("click", async () => {
     try {
       errorBox.classList.add("hidden");
@@ -752,9 +827,7 @@ function createAuthGateUI() {
       }
       showGlobalToast(`Welcome back, ${user.displayName || user.email}!`, "success");
     } catch (err) {
-      console.error("[Auth] Google Sign-In error:", err);
-      errorBox.classList.remove("hidden");
-      errorMsg.textContent = err.message.replace("Firebase: ", "");
+      renderAuthError(err);
     } finally {
       googleBtn.disabled = false;
       googleBtn.classList.remove("opacity-60");
@@ -791,17 +864,7 @@ function createAuthGateUI() {
         showGlobalToast(`Signed in as ${userCred.user.displayName || userCred.user.email}`, "success");
       }
     } catch (err) {
-      console.error("[Auth] Email sign in error:", err);
-      errorBox.classList.remove("hidden");
-      let msg = err.message.replace("Firebase: ", "");
-      if (err.code === "auth/invalid-credential" || err.code === "auth/wrong-password") {
-        msg = "Incorrect email or password. Please verify your typing.";
-      } else if (err.code === "auth/email-already-in-use") {
-        msg = "An account already exists with this email address.";
-      } else if (err.code === "auth/weak-password") {
-        msg = "Password should be at least 6 characters.";
-      }
-      errorMsg.textContent = msg;
+      renderAuthError(err);
     } finally {
       submitBtn.disabled = false;
       submitBtn.classList.remove("opacity-60");
@@ -826,8 +889,11 @@ function updateHeaderUserStatus(user) {
   signoutBtns.forEach(btn => {
     btn.onclick = async () => {
       if (confirm("Are you sure you want to sign out from College OS?")) {
-        await signOut(auth);
+        localStorage.removeItem("college_os_local_auth_user");
+        try { await signOut(auth); } catch(e) {}
         showGlobalToast("Signed out successfully.", "info");
+        createAuthGateUI();
+        updateHeaderUserStatus(null);
       }
     };
   });
@@ -836,11 +902,19 @@ function updateHeaderUserStatus(user) {
   const syncPills = document.querySelectorAll("[data-cloud-sync-status]");
   syncPills.forEach(pill => {
     if (user) {
-      pill.innerHTML = `
-        <span class="material-symbols-outlined text-[15px] text-secondary" style="font-variation-settings: 'FILL' 1;">cloud_done</span>
-        <span>Cloud Active</span>
-      `;
-      pill.title = `Signed in as ${user.email} • Firebase & Android Sync`;
+      if (user.isLocalOffline) {
+        pill.innerHTML = `
+          <span class="material-symbols-outlined text-[15px] text-primary" style="font-variation-settings: 'FILL' 1;">offline_bolt</span>
+          <span>Offline Active</span>
+        `;
+        pill.title = `Offline Mode • Local Device Storage`;
+      } else {
+        pill.innerHTML = `
+          <span class="material-symbols-outlined text-[15px] text-secondary" style="font-variation-settings: 'FILL' 1;">cloud_done</span>
+          <span>Cloud Active</span>
+        `;
+        pill.title = `Signed in as ${user.email} • Firebase & Android Sync`;
+      }
     } else {
       pill.innerHTML = `
         <span class="material-symbols-outlined text-[15px] text-on-surface-variant">cloud_off</span>
@@ -854,6 +928,7 @@ function updateHeaderUserStatus(user) {
 onAuthStateChanged(auth, (user) => {
   if (user) {
     console.log("[Auth] User authenticated:", user.uid, user.email);
+    localStorage.removeItem("college_os_local_auth_user");
     removeAuthGateUI();
     updateHeaderUserStatus(user);
     setupCloudListeners();
@@ -866,6 +941,18 @@ onAuthStateChanged(auth, (user) => {
       syncAllLocalToCloud();
     }, 1000);
   } else {
+    // Check if user chose offline local mode
+    const localUserRaw = localStorage.getItem("college_os_local_auth_user");
+    if (localUserRaw) {
+      try {
+        const localUser = JSON.parse(localUserRaw);
+        console.log("[Auth] Resumed local offline session:", localUser);
+        removeAuthGateUI();
+        updateHeaderUserStatus(localUser);
+        return;
+      } catch(e) {}
+    }
+
     console.log("[Auth] No active session. Showing Auth Gate.");
     createAuthGateUI();
     updateHeaderUserStatus(null);

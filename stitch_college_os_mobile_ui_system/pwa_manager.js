@@ -131,10 +131,26 @@ window.addEventListener('appinstalled', () => {
   deferredInstallPrompt = null;
 });
 
+// 5. Direct Install Trigger helper
+export async function promptInstallApp() {
+  if (deferredInstallPrompt) {
+    try {
+      deferredInstallPrompt.prompt();
+      const choiceResult = await deferredInstallPrompt.userChoice;
+      deferredInstallPrompt = null;
+      return choiceResult.outcome === 'accepted';
+    } catch (e) {
+      console.warn('[PWA] Prompt error:', e);
+    }
+  }
+  return false;
+}
+
 document.addEventListener('DOMContentLoaded', mountPwaControls);
 setTimeout(mountPwaControls, 500);
 
 window.PwaManager = {
   toggleNativeFullscreen,
-  isStandaloneApp
+  isStandaloneApp,
+  promptInstallApp
 };
